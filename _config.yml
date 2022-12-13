@@ -26,7 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/neuromodular-wiki" # the subpath of your site, e.g. /blog
 url: "https://harrisonallen.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
-github_username:  hmallen
+github_username:  harrisonallen
 
 include: ['_pages']
 header_pages: ['_pages/about.md', '_pages/test_subject_main.md']
