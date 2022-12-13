@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Test Subject
-permalink: /test_subject_main/
+permalink: /test_subject/
 ---
 
 # This is our test subject
 
 Within this test subject, we have multiple subtopics:
-* [Test subject 01]({{ "/test_subject/test_subject_01/" | relative_url }})
-* [Test subject 02]({{ "/test_subject/test_subject_02/" | relative_url }})
+* [Test subject 01]({{ "/test_subject/01/" | relative_url }})
+* [Test subject 02]({{ "/test_subject/02/" | relative_url }})
 
 Here's a good spot to test different things, like images, organization, etc.
 1. I can give a list of instructions
@@ -21,4 +21,4 @@ In this section I could provide useful links
 
 *Let's stop there.*
 
-Oh yeah, to run a test, use `bundle exec jekyll serve --config _config.yml,_config_dev.yml` in an admin command prompt
+Oh yeah, to run a test, use `bundle exec jekyll serve` in an admin command prompt
