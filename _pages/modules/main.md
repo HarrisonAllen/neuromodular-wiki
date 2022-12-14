@@ -8,7 +8,7 @@ permalink: /modules/
 
 <!-- ![An array of completed modules]({{ "/assets/img/modules/module_array.jpg" | relative_url }}) -->
 <p align="center">
-    <img src='{{ "/assets/img/modules/module_array.jpg" | relative_url }}' alt='An array of completed modules' width="50%">
+    <img src='{{ "/assets/img/modules/module_array.jpg" | relative_url }}' alt='An array of completed modules' width="60%">
 </p>
 
 For using the modules:
