@@ -1,13 +1,18 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: page
 title: Neuromodular Wiki
 ---
 
-# Let's get started with these funky wireless modules, yeah?
+## Here are the links for each part, select which one you need
 
-* First order of business, putting some junk down to test.
-
-And that's all, folks!
+<div class="alignwrapper">
+    <div class="alignleft">
+        <a href='{{ "/modules/" | relative_url }}'><img src='{{ "/assets/img/index/modules.png" | relative_url }}' alt="modules" width="90%" /></a>
+    </div>
+    <div class="aligncenter">
+        <a href='{{ "/blue-board/" | relative_url }}'><img src='{{ "/assets/img/index/blue-board.png" | relative_url }}' alt="blue board" width="90%" /></a>
+    </div>
+    <div class="alignright">
+        <a href='{{ "/gui/" | relative_url }}'><img src='{{ "/assets/img/index/gui.png" | relative_url }}' alt="gui" width="90%" /></a>
+    </div>
+</div>
