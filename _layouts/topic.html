@@ -12,32 +12,31 @@ layout: default
     <br>
   </div>
   <div class="alignwrapper">
-    {%- if page.previous -%}
-    {%- assign previous_page = site.pages | where: "permalink", page.previous | first -%}
-    {%- if previous_page.title -%}
-    <p class="alignleft"><a href="{{ previous_page.permalink | relative_url}}">&lt;- {{ previous_page.title }}</a></p>
-    {%- endif -%}
-    {%- else -%}
-    <p class="alignleft"></p>
-    {%- endif -%}
+    <div class="alignleft">
+      {%- if page.previous -%}
+      {%- assign previous_page = site.pages | where: "permalink", page.previous | first -%}
+      {%- if previous_page.title -%}
+      <button onclick="window.location.href='{{ previous_page.permalink | relative_url}}'">&lt;- {{ previous_page.title }}</button>
+      {%- endif -%}
+      {%- endif -%}
+    </div>
     
-    {%- if page.base -%}
-    {%- assign base_page = site.pages | where: "permalink", page.base | first -%}
-    {%- if base_page.title -%}
-    <p class="aligncenter"><a href="{{ base_page.permalink | relative_url}}">{{ base_page.title }}</a></p>
-    {%- endif -%}
-    {%- else -%}
-    <p class="aligncenter"></p>
-    {%- endif -%}
+    <div class="aligncenter">
+      {%- if page.base -%}
+      {%- assign base_page = site.pages | where: "permalink", page.base | first -%}
+      {%- if base_page.title -%}
+      <button onclick="window.location.href='{{ base_page.permalink | relative_url}}'">{{ base_page.title }}</button>
+      {%- endif -%}
+      {%- endif -%}
+    </div>
 
-    {%- if page.next -%}
-    {%- assign next_page = site.pages | where: "permalink", page.next | first -%}
-    {%- if next_page.title -%}
-    <p class="alignright"><a href="{{ next_page.permalink | relative_url}}">{{ next_page.title }} -&gt;</a></p>
-    {%- endif -%}
-    {%- else -%}
-    <p class="alignright"></p>
-    {%- endif -%}
+    <div class="alignright">
+      {%- if page.next -%}
+      {%- assign next_page = site.pages | where: "permalink", page.next | first -%}
+      {%- if next_page.title -%}
+      <button onclick="window.location.href='{{ next_page.permalink | relative_url}}'">{{ next_page.title }} -&gt;</button>
+      {%- endif -%}
+      {%- endif -%}
   </div>
 
 </article>

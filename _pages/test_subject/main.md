@@ -9,6 +9,7 @@ permalink: /test_subject/
 Within this test subject, we have multiple subtopics:
 * [Test subject 01]({{ "/test_subject/01/" | relative_url }})
 * [Test subject 02]({{ "/test_subject/02/" | relative_url }})
+* [Test subject 03]({{ "/test_subject/03/" | relative_url }})
 
 Here's a good spot to test different things, like images, organization, etc.
 1. I can give a list of instructions

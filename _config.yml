@@ -29,7 +29,7 @@ url: "https://harrisonallen.github.io" # the base hostname & protocol for your s
 github_username:  harrisonallen
 
 include: ['_pages']
-header_pages: ['_pages/about.md', '_pages/test_subject/main.md']
+header_pages: ['_pages/modules/main.md', '_pages/about.md']
 # Build settings
 sass:
   sass_dir: _sass
