@@ -14,6 +14,7 @@ permalink: /modules/
 For using the modules:
 * [PWM vs Analog]({{ "/modules/differences/" | relative_url }})
 * [Configure module for fibers]({{ "/modules/configuration/" | relative_url }})
+* TODO: Add charging (include charge time of 10-15 minutes from 0% battery)
 * [Repurpose configured modules]({{ "/modules/repurpose/" | relative_url }})
 * [Adapters]({{ "/modules/adapters/" | relative_url }})
 

@@ -16,3 +16,6 @@ Here will be a ton of pictures, screenshots, etc. that describe:
 * Different screenshots of the GUI and what each thing means, with labels
 * Power user commands under the logs menu
 * The workflow for using a module, loading configs, etc. etc.
+
+Notes:
+* Make a note that delta mode does not allow for batching data, aka record slower
