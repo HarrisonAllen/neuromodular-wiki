@@ -5,7 +5,6 @@ permalink: /gui/installing/
 # previous: 
 base: /gui/
 next: /gui/using/
-toc: true
 ---
 
 ## Current Installers for v1.0

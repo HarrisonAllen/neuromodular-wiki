@@ -5,7 +5,6 @@ permalink: /blue-board/components/
 # previous: 
 base: /blue-board/
 next: /blue-board/programming/
-toc: true
 ---
 
 ## Here are the components that come with the blue board

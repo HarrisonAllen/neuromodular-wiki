@@ -5,7 +5,6 @@ permalink: /modules/adapters/
 previous: /modules/repurpose/
 base: /modules/
 next: /modules/assembly/
-toc: true
 ---
 
 ## Creating adapters
