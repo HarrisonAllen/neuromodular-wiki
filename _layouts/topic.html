@@ -7,8 +7,9 @@ layout: default
     <h1 class="post-title">{{ page.title | escape }}</h1>
   </header>
 
+  
   <div class="post-content">
-    {{ content }}
+    {{ content | toc }}
     <br>
   </div>
   <div class="alignwrapper">
