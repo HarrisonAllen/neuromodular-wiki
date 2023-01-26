@@ -7,9 +7,12 @@ base: /gui/
 next: /gui/using/
 ---
 
-## Current Installers for v1.0
-* [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.0/NeuromodularSetup.exe)
+## Current 
+
+## Current Installers (v1.1.0)
+* [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.1.0/NeuromodularSetup.exe)
 * MacOS (Coming Soon)
+([Jump to changelogs](#changelogs))
 
 ## Installing the GUI on Windows
 1. Download the most recent installer
@@ -26,7 +29,18 @@ next: /gui/using/
 6. Follow the steps on the installer
 7. You can now launch `Neuromodular`
 
+## Changelogs
+* v1.1.0
+    * Added low battery notification
+    * Added option to auto-test LED fibers every x minutes
+        * This will stop and restart stimulation to conduct the test (approx 1ms)
+        * LED test now provides timestamp of when result was measured
+    * Module panels now turn red on bluetooth disconnect
+    * Data export now uses seconds since epoch instead of datestring format
+
 ## Previous Installers
-* (No previous installers)
+* v1.0
+    * [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.0/NeuromodularSetup.exe)
+    * MacOS (Coming Soon)
 
 <!-- Basically a link to the GUI (depending on platform), and a guide for installing on each platform. -->
