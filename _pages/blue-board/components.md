@@ -32,7 +32,8 @@ next: /blue-board/programming/
     <p align="center">
         <img src='{{ "/assets/img/blue-board/USBToComputer.jpg" | relative_url }}' alt='Plugging USB into computer' width="60%">
     </p>
-4. You're all set! You should see a green LED (A) and a blinking red LED (B)
+4. If the Blue Board has already been programmed, you should see a green LED (A) and a blinking red LED (B), and you're all set!
     <p align="center">
         <img src='{{ "/assets/img/blue-board/PluggedIn.jpg" | relative_url }}' alt='Blue board plugged in and powered on' width="60%">
     </p>
+    If you're programming the Blue Board for the first time, then [follow the programming guide on the next page]({{ "/blue-board/programming/" | relative_url }})
