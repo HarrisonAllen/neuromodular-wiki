@@ -52,9 +52,9 @@ Now that you've done this, launching segger should default to opening this proje
             <img src='{{ "/assets/img/blue-board/programming/5-Popup.png" | relative_url }}' alt='JLINK in file explorer'>
         </p>
 3. In SEGGER, go to the top left and select `Target`->`Connect J-Link`
-        <p align="center">
-            <img src='{{ "/assets/img/blue-board/programming/6-Connect.png" | relative_url }}' alt='Menu item for connecting'>
-        </p>
+    <p align="center">
+        <img src='{{ "/assets/img/blue-board/programming/6-Connect.png" | relative_url }}' alt='Menu item for connecting'>
+    </p>
     - If you are prompted with a firmware update, select `Yes`
     - You can check that the Blue Board is properly connected by clicking on `Target` in the top left. The menu should look like this:
         <p align="center">
@@ -62,7 +62,7 @@ Now that you've done this, launching segger should default to opening this proje
         </p>
 4. Go to the top left and select `Build`->`Build and Run`
     <p align="center">
-    <img src='{{ "/assets/img/blue-board/programming/8-Build.png" | relative_url }}' alt='Menu item for building and running the firmware'>
+        <img src='{{ "/assets/img/blue-board/programming/8-Build.png" | relative_url }}' alt='Menu item for building and running the firmware'>
     </p>
     - The console at the bottom should show the following after a successful build:
         <p align="center">
