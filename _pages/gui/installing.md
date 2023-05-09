@@ -8,7 +8,7 @@ next: /gui/using/
 ---
 
 ## Current Installers (v1.1.0)
-* [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.1.0/NeuromodularSetup.exe)
+* [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.1.1/NeuromodularSetup.exe)
 * MacOS (Coming Soon)
 
 ([Jump to changelogs](#changelogs))
@@ -29,6 +29,10 @@ next: /gui/using/
 7. You can now launch `Neuromodular`
 
 ## Changelogs
+* v1.1.1
+    * Added option to change the unit of time on the graphs
+    * Changed settings menu layouts to allow for resizing and scrolling, useful for smaller screens
+    * Data export now includes both time since first data point and seconds since epoch
 * v1.1.0
     * Added low battery notification
     * Added option to auto-test LED fibers every x minutes
@@ -38,8 +42,9 @@ next: /gui/using/
     * Data export now uses seconds since epoch instead of datestring format
 
 ## Previous Installers
+* v1.1.0
+    * [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.1.0/NeuromodularSetup.exe)
 * v1.0
     * [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.0/NeuromodularSetup.exe)
-    * MacOS (Coming Soon)
 
 <!-- Basically a link to the GUI (depending on platform), and a guide for installing on each platform. -->
