@@ -7,7 +7,7 @@ base: /gui/
 next: /gui/using/
 ---
 
-## Current Installers (v1.1.0)
+## Current Installers (v1.1.1)
 * [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.1.1/NeuromodularSetup.exe)
 * MacOS (Coming Soon)
 
