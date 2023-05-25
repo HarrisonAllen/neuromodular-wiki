@@ -31,6 +31,11 @@ next: /gui/using/
 7. You can now launch `Neuromodular`
 
 ## Changelogs
+* v1.2.0b
+    * Added automations, which provides architecture to automatically perform certain actions. For example, a serial message from a TTL detector could trigger stimulation on a module.
+        * This beta release is missing certain functions, including:
+            * Saving and loading automation sequences
+            * Sending settings from the "Pin Action" automation
 * v1.1.1
     * Added option to change the unit of time on the graphs
     * Changed settings menu layouts to allow for resizing and scrolling, useful for smaller screens
