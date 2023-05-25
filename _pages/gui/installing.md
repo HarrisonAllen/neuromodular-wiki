@@ -7,11 +7,13 @@ base: /gui/
 next: /gui/using/
 ---
 
-## Current Installers (v1.1.1)
-* [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.1.1/NeuromodularSetup.exe)
-* MacOS (Coming Soon)
+## Current Installers (v1.2.0b)
+* [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.2.0b/NeuromodularSetup.exe)
 
 ([Jump to changelogs](#changelogs))
+
+## Extra Files
+* TTL Detector for Arduino UNO: [TTL-Detector.zip](https://github.com/HarrisonAllen/neuromodular-wiki/files/11567609/TTL-Detector.zip)
 
 ## Installing the GUI on Windows
 1. Download the most recent installer
@@ -42,6 +44,8 @@ next: /gui/using/
     * Data export now uses seconds since epoch instead of datestring format
 
 ## Previous Installers
+* v1.1.1
+    * [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.1.1/NeuromodularSetup.exe)
 * v1.1.0
     * [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.1.0/NeuromodularSetup.exe)
 * v1.0
