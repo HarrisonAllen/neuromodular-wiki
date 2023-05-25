@@ -11,17 +11,13 @@ Note: This guide is for Windows only
 
 ## Set up the SEGGER Embedded Studio environment
 
-1. Download and install [SEGGER Embedded Studio for ARM V5.42 for Windows](https://www.segger.com/downloads/embedded-studio/Setup_EmbeddedStudio_ARM_v542_win_x64.exe)
+1. Download and install [SEGGER Embedded Studio for ARM V7.12 for Windows](https://www.segger.com/downloads/embedded-studio/Setup_EmbeddedStudio_ARM_v712_win_x64.exe)
     - Leave all of the settings default
-    - Any time that you see this screen, just hit continue
-    <p align="center">
-        <img src='{{ "/assets/img/blue-board/programming/1-Continue.png" | relative_url }}' alt='Continue Screen'>
-    </p>
-2. Download and install the nRF5 SDK V15.2
+2. Download and install the nRF5 SDK V17.0.2
     1. Go to the [download page](https://www.nordicsemi.com/Products/Development-software/nrf5-sdk/download)
-    2. Scroll down and select `15.2.0 nRF5 SDK`
+    2. Scroll down and select `17.0.2 nRF5 SDK`
         <p align="center">
-            <img src='{{ "/assets/img/blue-board/programming/2-Select.png" | relative_url }}' alt='Select 15.2.0 nRF5 SDK'>
+            <img src='{{ "/assets/img/blue-board/programming/2-Select.png" | relative_url }}' alt='Select 17.0.2 nRF5 SDK'>
         </p>
     3. Scroll down and unselect all of the options in `SoftDevices`
         <p align="center">
