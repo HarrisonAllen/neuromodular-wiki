@@ -7,8 +7,8 @@ base: /gui/
 next: /gui/using/
 ---
 
-## Current Installers (v1.2.0b)
-* [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.2.0b/NeuromodularSetup.exe)
+## Current Installers (v1.2.1b)
+* [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.2.1b/NeuromodularSetup.exe)
 
 ([Jump to changelogs](#changelogs))
 
@@ -31,6 +31,10 @@ next: /gui/using/
 7. You can now launch `Neuromodular`
 
 ## Changelogs
+* v1.2.1b
+    * Fixed a bug where a blank pin action would crash the GUI
+    * Changed the serial handler to handle more serial scenarios and avoid crashing on certain malformed messages
+    * **Note:** This version of the GUI is required for compatibility with the included dev module firmware update
 * v1.2.0b
     * Added automations, which provides architecture to automatically perform certain actions. For example, a serial message from a TTL detector could trigger stimulation on a module.
         * This beta release is missing certain functions, including:
@@ -49,6 +53,8 @@ next: /gui/using/
     * Data export now uses seconds since epoch instead of datestring format
 
 ## Previous Installers
+* v1.2.0b
+    * [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.2.0b/NeuromodularSetup.exe)
 * v1.1.1
     * [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.1.1/NeuromodularSetup.exe)
 * v1.1.0

@@ -31,7 +31,7 @@ Note: This guide is for Windows only
     - Note that you will have to do two extractions to get to the SDK folder
     - The resulting folder name should be `nRF5_SDK_17.0.2_d674dde`
 3. Navigate to the following folder in the nRF5 SDK: `nRF5_SDK_17.0.2_d674dde\examples\ble_peripheral`
-4. Download [ble_app_uart_c_multilink.zip](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.2.0b/ble_app_uart_c_multilink.zip)
+4. Download [ble_app_uart_c_multilink.zip](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.2.1b/ble_app_uart_c_multilink.zip)
 5. Extract the .zip file to `nRF5_SDK_17.0.2_d674dde\examples\ble_peripheral`
 6. Navigate to `nRF5_SDK_17.0.2_d674dde\examples\ble_peripheral\ble_app_uart_c_multilink\pca10056\s140\ses`
 7. Launch `ble_app_uart_c_pca10056_s140.emProject` (by double clicking)
