@@ -29,13 +29,12 @@ Note: This guide is for Windows only
         </p>
     5. Extract the sdk to your desired location
     - Note that you will have to do two extractions to get to the SDK folder
-    - The resulting folder name should be `nRF5_SDK_15.2.0_9412b96`
-3. Navigate to the following folder in the nRF5 SDK: `nRF5_SDK_15.2.0_9412b96\examples\ble_central`
-4. Rename the folder `ble_app_uart_c` to `ble_app_uart_c-old` (keep the original folder in case you want to use it later)
-5. Download [ble_app_uart_c.zip](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.1.0/ble_app_uart_c.zip)
-6. Extract the .zip file to `nRF5_SDK_15.2.0_9412b96\examples\ble_central`
-7. Navigate to `nRF5_SDK_15.2.0_9412b96\examples\ble_central\ble_app_uart_c\pca10056\s140\ses`
-8. Launch `ble_app_uart_c_pca10056_s140.emProject` (by double clicking)
+    - The resulting folder name should be `nRF5_SDK_17.0.2_d674dde`
+3. Navigate to the following folder in the nRF5 SDK: `nRF5_SDK_17.0.2_d674dde\examples\ble_peripheral`
+4. Download [ble_app_uart_c_multilink.zip](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.2.0b/ble_app_uart_c_multilink.zip)
+5. Extract the .zip file to `nRF5_SDK_17.0.2_d674dde\examples\ble_peripheral`
+6. Navigate to `nRF5_SDK_17.0.2_d674dde\examples\ble_peripheral\ble_app_uart_c_multilink\pca10056\s140\ses`
+7. Launch `ble_app_uart_c_pca10056_s140.emProject` (by double clicking)
 
 Now that you've done this, launching segger should default to opening this project and `main.c`.
 
