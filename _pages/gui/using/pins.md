@@ -11,6 +11,13 @@ next: /gui/using/automation/
 * [Main Window]({{ "/gui/using/" | relative_url }})
 * [Module Control]({{ "/gui/using/modules/" | relative_url }})
 * On this page:
+    * [Pin Selection](#pin-selection)
+    * [Blue/Green/Red LED Pin](#led-pin)
+    * [Heater Pin](#heater-pin)
+    * [Temperature Pin](#temperature-pin)
+    * [Voltage Pin](#voltage-pin)
+    * [Resistance Pin](#resistance-pin)
+    * [Ground Pin](#ground-pin)
 * [Automation Sequence]({{ "/gui/using/automation/" | relative_url }})
 
 ## Pin Selection
@@ -23,11 +30,11 @@ There are 4 pins on a module. Each pin will have a corresponding function on the
 The available pin types are:
 * [**Blue/Green/Red LED**](#led-pin) - Provides repeating pulse-rest waveforms for optogenitic stimulation.
     * Blue, red, and green LED controls all function the same. The different color options are available to help distinguish fibers with multiple colors of LEDs.
-* [**Heater**](#heater-pin-control) - Provides a one-shot pulse for powering a heating element.
-* [**Temperature**](#temperature-pin-control) - Provides NTC temperature recording.
-* [**Voltage**](#voltage-pin-control) - Provides voltage application and recording.
-* [**Resistance**](#resistance-pin-control) - Provides resistance recording.
-* [**Ground**](#ground-pin-control) - Does nothing but shows which pin on the fiber is allocated as ground.
+* [**Heater**](#heater-pin) - Provides a one-shot pulse for powering a heating element.
+* [**Temperature**](#temperature-pin) - Provides NTC temperature recording.
+* [**Voltage**](#voltage-pin) - Provides voltage application and recording.
+* [**Resistance**](#resistance-pin) - Provides resistance recording.
+* [**Ground**](#ground-pin) - Does nothing but shows which pin on the fiber is allocated as ground.
 
 Here's an example of a module that's been set up with the following pin layout:
 1. Blue LED
