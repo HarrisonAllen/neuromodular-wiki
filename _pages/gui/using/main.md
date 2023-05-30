@@ -25,7 +25,7 @@ next: /gui/using/modules/
 This is what the GUI looks like when you launch it:
 
 <p align="center">
-    <img src='{{ "/assets/img/gui/using/01-MainMenu.png" | relative_url }}' alt='Main menu on first launch' width="60%">
+    <img src='{{ "/assets/img/gui/using/01-MainMenu.png" | relative_url }}' alt='Main menu on first launch' width="80%">
 </p>
 
 1. [Port Manager](#port-manager)
@@ -41,7 +41,7 @@ This is what the GUI looks like when you launch it:
 4. The module should automatically show up like this:
 
 <p align="center">
-    <img src='{{ "/assets/img/gui/using/03-ModuleConnected.png" | relative_url }}' alt='GUI with module connected' width="60%">
+    <img src='{{ "/assets/img/gui/using/03-ModuleConnected.png" | relative_url }}' alt='GUI with module connected' width="80%">
 </p>
 
 **Notes**
@@ -96,7 +96,7 @@ A serial message is broken down as follows:
 The Settings menu contains application wide settings. Currently it only handles module graph display settings.
 
 <p align="center">
-    <img src='{{ "/assets/img/gui/using/05-Settings.png" | relative_url }}' alt='Settings menu' width="60%">
+    <img src='{{ "/assets/img/gui/using/05-Settings.png" | relative_url }}' alt='Settings menu' width="70%">
 </p>
 
 1. **Graph height** - The height of the module graph, in pixels.
