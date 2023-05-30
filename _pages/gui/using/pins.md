@@ -58,7 +58,7 @@ Here's an example of a module that's been set up with the following pin layout:
             <p align="center">
                 <img src='{{ "/assets/img/gui/using/pins/02b-LEDPinOn.png" | relative_url }}' alt='LED Pin On'>
             </p>
-        * **Pulsing** - LED is currently pulsing on and off(according to the waveform set in the settings)
+        * **Pulsing** - LED is currently pulsing on and off (according to the waveform set in the settings)
             <p align="center">
                 <img src='{{ "/assets/img/gui/using/pins/02c-LEDPinPulsing.png" | relative_url }}' alt='LED Pin Pulsing'>
             </p>
@@ -118,6 +118,58 @@ Here's an example of a module that's been set up with the following pin layout:
         * Pulse On Duration: 1100ms
         * Pulse Off Duration: 100ms
 
+[Back to top](#)
+
+## Heater Pin
+
+### Heater Pin Controller
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/pins/04-HeaterPin.png" | relative_url }}' alt='Heater Pin Controller' width="60%">
+</p>
+
+1. **Heater Status and Manual Control Button** - Displays Heater status and allows for manual control.
+    * Clicking this button will toggle the Heater pin on and off.
+    * The button will automatically update to reflect the status of the Heater pin on the module. These statuses are:
+        * **Off** - Heater is completely off
+            <p align="center">
+                <img src='{{ "/assets/img/gui/using/pins/04a-HeaterPinOff.png" | relative_url }}' alt='Heater Pin Off'>
+            </p>
+        * **On** - Heater is completely on (at the duty cycle/voltage set in the settings)
+            <p align="center">
+                <img src='{{ "/assets/img/gui/using/pins/04b-HeaterPinOn.png" | relative_url }}' alt='Heater Pin On'>
+            </p>
+        * **Pulsing** - Heater is currently on and will turn off at the end of the pulse (as defined in the settings)
+            <p align="center">
+                <img src='{{ "/assets/img/gui/using/pins/04c-HeaterPinPulsing.png" | relative_url }}' alt='Heater Pin Pulsing'>
+            </p>
+2. **Start** - Starts the Heater pulse.
+3. **Stop** - Stops the Heater pulse.
+    * Once stopped, the Heater pin will turn off.
+4. [**Settings**](#heater-pin-settings) - Settings for the Heater pin.
+5. **Graph Display Toggle** - Toggles the visibility of the Heater pin on the module's graph.
+    * This can help declutter the graph by hiding unnecessary data.
+
+### Heater Pin Settings
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/pins/05-HeaterPinSettings.png" | relative_url }}' alt='Heater Pin Settings' width="8%">
+</p>
+
+1. **Pulse Duration (ms)** - The duration of the heater pulse before turning off.
+2. **Heater Intensity** - Sets the intensity of the Heater.
+    * You can either enter a value manually or adjust it using the slider.
+    * The intensity is defined as follows:
+        * For PWM modules, it is the duty cycle for the Heater and ranges from 0-100%. The voltage is always 3.3v.
+        * For Analog modules, it is the voltage applied to the Heater and ranges from 0-3.3v.
+3. **Live Preview** - Checking this will turn on the Heater pin at the current intensity.
+    * Changes to the intensity will be reflected on the Heater pin in real time.
+
+### Heater Pin Notes
+* The Heater pulse will not repeat. If you want to have a repeating cycle, I recommend taking a look at [Automations]({{ "/gui/using/automation/" | relative_url }}).
+* Do not set any of the Pulse duration to `0`. This can cause the module to fail.
+
+[Back to top](#)
 
 Notes:
 * Make a note that delta mode does not allow for batching data, aka record slower
