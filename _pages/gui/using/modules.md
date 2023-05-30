@@ -21,7 +21,7 @@ next: /gui/using/pins/
 The Module Sidebar provides basic information on connected modules and allows for a few basic actions.
 
 <p align="center">
-    <img src='{{ "/assets/img/gui/using/01-ModuleSidebar.png" | relative_url }}' alt='The module sidebar' width="60%">
+    <img src='{{ "/assets/img/gui/using/modules/01-ModuleSidebar.png" | relative_url }}' alt='The module sidebar' width="60%">
 </p>
 
 1. **Visibility Button** - Toggles the visibility of the module.
@@ -45,7 +45,7 @@ The Module Sidebar provides basic information on connected modules and allows fo
 The Module Controllers allow for control of multiple modules.
 
 <p align="center">
-    <img src='{{ "/assets/img/gui/using/02-Modules.png" | relative_url }}' alt='The module controller' width="80%">
+    <img src='{{ "/assets/img/gui/using/modules/02-Modules.png" | relative_url }}' alt='The module controller' width="80%">
 </p>
 
 1. **Module Title** - Displays the module name and the module type.
@@ -64,7 +64,7 @@ The Module Controllers allow for control of multiple modules.
 The Module Graphs display data from the modules.
 
 <p align="center">
-    <img src='{{ "/assets/img/gui/using/03-ModuleGraphs.png" | relative_url }}' alt='The module graphs' width="80%">
+    <img src='{{ "/assets/img/gui/using/modules/03-ModuleGraphs.png" | relative_url }}' alt='The module graphs' width="80%">
 </p>
 
 1. **Module Name** - Displays the module's name.
@@ -77,5 +77,5 @@ The Module Graphs display data from the modules.
 Here is what a connected module with two LEDs stimulating and one NTC recording temperature looks like:
 
 <p align="center">
-    <img src='{{ "/assets/img/gui/using/04-OperationExample.png" | relative_url }}' alt='Example of real data' width="80%">
+    <img src='{{ "/assets/img/gui/using/modules/04-OperationExample.png" | relative_url }}' alt='Example of real data' width="80%">
 </p>
