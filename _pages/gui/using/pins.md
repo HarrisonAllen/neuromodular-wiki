@@ -223,7 +223,7 @@ Here's an example of a module that's been set up with the following pin layout:
 ### Temperature Pin Settings
 
 <p align="center">
-    <img src='{{ "/assets/img/gui/using/pins/06-TemperaturePinSettings.png" | relative_url }}' alt='Temperature Pin Settings' width="80%">
+    <img src='{{ "/assets/img/gui/using/pins/08-TemperaturePinSettings.png" | relative_url }}' alt='Temperature Pin Settings' width="80%">
 </p>
 
 1. **Moving Average (points)** - The number of points to include in the [moving average](https://en.wikipedia.org/wiki/Moving_average).
