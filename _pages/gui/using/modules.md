@@ -10,12 +10,20 @@ next: /gui/using/pins/
 ## Quick links
 * [Main Window]({{ "/gui/using/" | relative_url }})
 * On this page:
+    * [Operation Example](#operation-example)
     * [Module Sidebar](#module-sidebar)
     * [Module Controllers](#module-controllers)
     * [Module Graphs](#module-graphs)
     * [Real Data Example](#real-data-example)
 * [Pin Control]({{ "/gui/using/pins/" | relative_url }})
 * [Automation Sequence]({{ "/gui/using/automation/" | relative_url }})
+
+## Operation Example
+Here is what a connected module with two LEDs stimulating and one NTC recording temperature looks like:
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/modules/OperationExample.gif" | relative_url }}' alt='Example of real data' width="80%">
+</p>
 
 ## Module Sidebar
 The Module Sidebar provides basic information on connected modules and allows for a few basic actions.
@@ -74,8 +82,3 @@ The Module Graphs display data from the modules.
 4. **Clear Data** - Clears all recorded data for that module.
 
 ## Real Data Example
-Here is what a connected module with two LEDs stimulating and one NTC recording temperature looks like:
-
-<p align="center">
-    <img src='{{ "/assets/img/gui/using/modules/04-OperationExample.png" | relative_url }}' alt='Example of real data' width="80%">
-</p>
