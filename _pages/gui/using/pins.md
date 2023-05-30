@@ -233,7 +233,7 @@ Here's an example of a module that's been set up with the following pin layout:
     * The data sheet for the NTC should have an approximation of this, but it's important to measure this value for each NTC that you use to get accurate temperature calculations.
 5. **NTC nominal resistance @ 25&#176;C** - The fiber NTC's measured nominal resistance at 25&#176;C.
     * The data sheet for the NTC should have an approximation of this, but it's important to measure this value for each NTC that you use to get accurate temperature calculations.
-6. **Module Resistor Value** - The pin resistor used on this module.
+6. **Module Resistor Value (&#8486;)** - The pin resistor used on this module.
     * This resistance is specific to the pin configuration on each module.
 
 ### Temperature Pin Notes
@@ -241,5 +241,102 @@ Here's an example of a module that's been set up with the following pin layout:
     * For example, if you want to read temperature every 40ms, then increase the `Points per batch` to 5 so that data is only sent after 5 points are measured, i.e. every 200ms.
     * When you are using delta mode, it will only send 1 point per batch regardless of the `Points per batch` setting.
 * It's important to set up the NTC and Module parameters correctly to get accurate temperature measurements. If you don't need super accurate data, then you can just use the NTC infromation from its corresponding data sheet.
+
+## Voltage Pin
+
+### Voltage Pin Controller
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/pins/09-VoltagePin.png" | relative_url }}' alt='Voltage Pin Controller' width="60%">
+</p>
+
+1. **Voltage Manual Reading Button** - Allows for manual reading of the pin voltage.
+    * Clicking this button will request a voltage reading from the module.
+    * The manual reading will ignore the delta settings.
+2. **Current Voltage Reading (V)** - Displays the last measured voltage reading from the pin.
+3. **Delta Settings** - Designates another pin on the module to measure the voltage delta between. See [Temperature Pin Delta](#temperature-pin-delta) for more information. (It's the same for voltage.)
+4. **Start** - Starts measuring voltage.
+5. **Stop** - Stops measuring voltage.
+6. [**Settings**](#voltage-pin-settings) - Settings for the voltage pin.
+7. **Graph Display Toggle** - Toggles the visibility of the voltage pin on the module's graph.
+    * This can help declutter the graph by hiding unnecessary data.
+
+### Voltage Pin Settings
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/pins/10-VoltagePinSettings.png" | relative_url }}' alt='Voltage Pin Settings' width="80%">
+</p>
+
+1. **Moving Average (points)** - The number of points to include in the [moving average](https://en.wikipedia.org/wiki/Moving_average).
+    * This helps filter noise and smooth out the data.
+    * Higher values will smooth the data more but will take longer to reflect changes in the voltage reading.
+    * Lower values will keep the data noisy but will quickly reflect changes in the voltage reading.
+    * I recommend a value of 5 to start with.
+2. **Time between each sample (ms)** - The time between each voltage measurement.
+3. **Points per batch (points)** - The number of points to combine in a single message from the module. 
+    * The module measure data at the rate set by `Time between each sample`, and once `Points per batch` points have been measured, the module sends all of them at once.
+    * E.g. with 3 `Points per batch`, the module will collect 3 measurements then send them all at once.
+    * See the [Voltage Pin Notes](#voltage-pin-notes) for more details.
+    * On PWM modules this value is fixed at 3.3v, but Analog modules can set this value from 0-3.3v
+
+### Voltage Pin Notes
+* Try to only send data from this pin every 200ms or so. You can send data faster than this, but it may prevent other data from being sent from the module. This is ok for voltage, but could mean that information from other pins (such as LED status) could get lost.
+    * For example, if you want to read voltage every 40ms, then increase the `Points per batch` to 5 so that data is only sent after 5 points are measured, i.e. every 200ms.
+    * When you are using delta mode, it will only send 1 point per batch regardless of the `Points per batch` setting.
+
+## Resistance Pin
+
+### Resistance Pin Controller
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/pins/11-ResistancePin.png" | relative_url }}' alt='Resistance Pin Controller' width="60%">
+</p>
+
+1. **Resistance Manual Reading Button** - Allows for manual reading of the pin resistance.
+    * Clicking this button will request a resistance reading from the module.
+    * The manual reading will ignore the delta settings.
+2. **Current Resistance Reading (k&#8486;)** - Displays the last measured resistance reading from the pin.
+3. **Delta Settings** - Designates another pin on the module to measure the resistance delta between. See [Temperature Pin Delta](#temperature-pin-delta) for more information. (It's the same for resistance.)
+4. **Start** - Starts measuring resistance.
+5. **Stop** - Stops measuring resistance.
+6. [**Settings**](#resistance-pin-settings) - Settings for the resistance pin.
+7. **Graph Display Toggle** - Toggles the visibility of the resistance pin on the module's graph.
+    * This can help declutter the graph by hiding unnecessary data.
+
+### Resistance Pin Settings
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/pins/12-ResistancePinSettings.png" | relative_url }}' alt='Resistance Pin Settings' width="80%">
+</p>
+
+1. **Moving Average (points)** - The number of points to include in the [moving average](https://en.wikipedia.org/wiki/Moving_average).
+    * This helps filter noise and smooth out the data.
+    * Higher values will smooth the data more but will take longer to reflect changes in the resistance reading.
+    * Lower values will keep the data noisy but will quickly reflect changes in the resistance reading.
+    * I recommend a value of 5 to start with.
+2. **Time between each sample (ms)** - The time between each reistance measurement.
+3. **Points per batch (points)** - The number of points to combine in a single message from the module. 
+    * The module measure data at the rate set by `Time between each sample`, and once `Points per batch` points have been measured, the module sends all of them at once.
+    * E.g. with 3 `Points per batch`, the module will collect 3 measurements then send them all at once.
+    * See the [Resistance Pin Notes](#resistance-pin-notes) for more details.
+4. **Module Resistor Value (&#8486;)** - The pin resistor used on this module.
+    * This resistance is specific to the pin configuration on each module.
+5. **Output Voltage (V)** - The voltage to apply when taking a measurement.
+    * On PWM modules this value is fixed at 3.3v, but Analog modules can set this value from 0-3.3v.
+
+### Resistance Pin Notes
+* Try to only send data from this pin every 200ms or so. You can send data faster than this, but it may prevent other data from being sent from the module. This is ok for resistance, but could mean that information from other pins (such as LED status) could get lost.
+    * For example, if you want to read resistance every 40ms, then increase the `Points per batch` to 5 so that data is only sent after 5 points are measured, i.e. every 200ms.
+    * When you are using delta mode, it will only send 1 point per batch regardless of the `Points per batch` setting.
+
+[Back to top](#)
+
+## Ground Pin
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/pins/13-GroundPin.png" | relative_url }}' alt='Ground Pin' width="60%">
+</p>
+
+Does nothing but shows which pin on the fiber is allocated as ground.
 
 [Back to top](#)
