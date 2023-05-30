@@ -1,7 +1,7 @@
 ---
 layout: topic
 title: Using the GUI - Modules
-permalink: /gui/installing/
+permalink: /gui/using/modules/
 previous: /gui/using/
 base: /gui/
 next: /gui/using/pins/
