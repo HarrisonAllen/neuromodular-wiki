@@ -153,7 +153,7 @@ Here's an example of a module that's been set up with the following pin layout:
 ### Heater Pin Settings
 
 <p align="center">
-    <img src='{{ "/assets/img/gui/using/pins/05-HeaterPinSettings.png" | relative_url }}' alt='Heater Pin Settings' width="8%">
+    <img src='{{ "/assets/img/gui/using/pins/05-HeaterPinSettings.png" | relative_url }}' alt='Heater Pin Settings' width="80%">
 </p>
 
 1. **Pulse Duration (ms)** - The duration of the heater pulse before turning off.
@@ -167,9 +167,79 @@ Here's an example of a module that's been set up with the following pin layout:
 
 ### Heater Pin Notes
 * The Heater pulse will not repeat. If you want to have a repeating cycle, I recommend taking a look at [Automations]({{ "/gui/using/automation/" | relative_url }}).
-* Do not set any of the Pulse duration to `0`. This can cause the module to fail.
+* Do not set the Pulse duration to `0`. This can cause the module to fail.
 
 [Back to top](#)
 
-Notes:
-* Make a note that delta mode does not allow for batching data, aka record slower
+## Temperature Pin
+
+### Temperature Pin Controller
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/pins/06-TemperaturePin.png" | relative_url }}' alt='Temperature Pin Controller' width="60%">
+</p>
+
+1. **Temperature Manual Reading Button** - Allows for manual reading of the pin temperature.
+    * Clicking this button will request a temperature reading from the module.
+    * The manual reading will ignore the delta settings.
+2. **Current Temperature Reading (&#176;C)** - Displays the last measured temperature reading from the pin.
+3. **Delta Settings** - Designates another pin on the module to measure the temperature delta between. See [Temperature Pin Delta](#temperature-pin-delta) for more information.
+4. **Start** - Starts measuring temperature.
+5. **Stop** - Stops measuring temperature.
+6. [**Settings**](#temperature-pin-settings) - Settings for the temperature pin.
+7. **Graph Display Toggle** - Toggles the visibility of the temperature pin on the module's graph.
+    * This can help declutter the graph by hiding unnecessary data.
+
+### Temperature Pin Delta
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/pins/07-TemperaturePinDelta.png" | relative_url }}' alt='Temperature Pin Delta' width="60%">
+</p>
+
+1. **Delta Pin Selection** - On the primary pin, select the delta pin to compare.
+    * In this example, we use Pin 3 as the primary pin and select Pin 4 as the delta pin.
+2. **Temperature Delta Display** - Displays the temperature difference of the primary pin minus the delta pin.
+    * In this example, we are seeing: `Pin 3 temperature - Pin 4 temperature` on Pin 3's display.
+3. **Temperature Average Display** - Displays the average temperature of the primary pin and the delta pin.
+    * In this example, we are seeing: `(Pin 3 temperature + Pin 4 temperature) / 2` on Pin 4's display.
+4. **Other Delta Pin Selection** - Do not select anything on the delta pin's delta selection.
+    * In this example, we selected Pin 4 as the delta for Pin 3, so we select nothing for Pin 4.
+
+* To start measuring the delta use the `Start` button on the primary pin.
+    * In this example, you would press `Start` on Pin 3.
+
+**Delta Notes**:
+* The delta and average are only for real time analysis. The recorded data will only include the raw temperature measured by each pin.
+* Delta mode only sends one point per batch. Keep this in mind when setting the time between each sample.
+* Be sure to synchronize the moving average in the settings on each pin.
+
+### Temperature Pin Settings
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/pins/06-TemperaturePinSettings.png" | relative_url }}' alt='Temperature Pin Settings' width="80%">
+</p>
+
+1. **Moving Average (points)** - The number of points to include in the [moving average](https://en.wikipedia.org/wiki/Moving_average).
+    * This helps filter noise and smooth out the data.
+    * Higher values will smooth the data more but will take longer to reflect changes in the temperature reading.
+    * Lower values will keep the data noisy but will quickly reflect changes in the temperature reading.
+    * I recommend a value of 5 to start with.
+2. **Time between each sample (ms)** - The time between each temperature measurement.
+3. **Points per batch (points)** - The number of points to combine in a single message from the module. 
+    * The module measure data at the rate set by `Time between each sample`, and once `Points per batch` points have been measured, the module sends all of them at once.
+    * E.g. with 3 `Points per batch`, the module will collect 3 measurements then send them all at once.
+    * See the [Temperature Pin Notes](#temperature-pin-notes) for more details.
+4. **NTC Beta value @ 25&#176;C** - The fiber NTC's measured beta value at 25&#176;C.
+    * The data sheet for the NTC should have an approximation of this, but it's important to measure this value for each NTC that you use to get accurate temperature calculations.
+5. **NTC nominal resistance @ 25&#176;C** - The fiber NTC's measured nominal resistance at 25&#176;C.
+    * The data sheet for the NTC should have an approximation of this, but it's important to measure this value for each NTC that you use to get accurate temperature calculations.
+6. **Module Resistor Value** - The pin resistor used on this module.
+    * This resistance is specific to the pin configuration on each module.
+
+### Temperature Pin Notes
+* Try to only send data from this pin every 200ms or so. You can send data faster than this, but it may prevent other data from being sent from the module. This is ok for temperature, but could mean that information from other pins (such as LED status) could get lost.
+    * For example, if you want to read temperature every 40ms, then increase the `Points per batch` to 5 so that data is only sent after 5 points are measured, i.e. every 200ms.
+    * When you are using delta mode, it will only send 1 point per batch regardless of the `Points per batch` setting.
+* It's important to set up the NTC and Module parameters correctly to get accurate temperature measurements. If you don't need super accurate data, then you can just use the NTC infromation from its corresponding data sheet.
+
+[Back to top](#)
