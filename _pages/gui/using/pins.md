@@ -21,7 +21,7 @@ There are 4 pins on a module. Each pin will have a corresponding function on the
 </p>
 
 The available pin types are:
-* [**Blue/Green/Red LED**](#led-pin-controller) - Provides repeating pulse-rest waveforms for optogenitic stimulation.
+* [**Blue/Green/Red LED**](#led-pin) - Provides repeating pulse-rest waveforms for optogenitic stimulation.
     * Blue, red, and green LED controls all function the same. The different color options are available to help distinguish fibers with multiple colors of LEDs.
 * [**Heater**](#heater-pin-control) - Provides a one-shot pulse for powering a heating element.
 * [**Temperature**](#temperature-pin-control) - Provides NTC temperature recording.
@@ -39,7 +39,9 @@ Here's an example of a module that's been set up with the following pin layout:
     <img src='{{ "/assets/img/gui/using/pins/01a-FullSelection.png" | relative_url }}' alt='Full pin selection for a module of Blue LED, Ground, Green LED, Temperature' width="60%">
 </p>
 
-## LED Pin Controller
+## LED Pin
+
+### LED Pin Controller
 
 <p align="center">
     <img src='{{ "/assets/img/gui/using/pins/02-LEDPin.png" | relative_url }}' alt='LED Pin Controller' width="60%">
@@ -73,7 +75,7 @@ Here's an example of a module that's been set up with the following pin layout:
 6. **Graph Display Toggle** - Toggles the visibility of the LED pin on the module's graph.
     * This can help declutter the graph by hiding unnecessary data.
 
-## LED Pin Settings
+### LED Pin Settings
 
 <p align="center">
     <img src='{{ "/assets/img/gui/using/pins/03-LEDPinSettings.png" | relative_url }}' alt='LED Pin Settings' width="80%">
@@ -106,6 +108,15 @@ Here's an example of a module that's been set up with the following pin layout:
             <img src='{{ "/assets/img/gui/using/pins/03a-LEDPinTest.png" | relative_url }}' alt='LED Pin Test - OK' width="60%">
         </p>
     * Failed tests will report either a short or a break.
+
+### LED Pin Notes
+* Do not set any of the Pulse/Rest durations to `0`. This can cause the module to fail.
+* To achieve a waveform of just LED on and LED off (no resting) you can do the following:
+    * For the example of a repeating 1000ms on, 2000ms off waveform:
+        * Pulse Duration: 1000ms
+        * Rest Duration: 2000ms
+        * Pulse On Duration: 1100ms
+        * Pulse Off Duration: 100ms
 
 
 Notes:
