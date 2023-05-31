@@ -16,6 +16,10 @@ base: /gui/
     * [Automation Sequence](#automation-sequence)
     * [Automations](#automations)
         * [Triggers](#triggers)
+            * [Serial Messsage Trigger](#serial-message-trigger)
+            * [Module Trigger](#module-trigger)
+            * [Pin Trigger](#pin-trigger)
+            * [Manual Trigger](#manual-trigger)
         * [Actions](#actions)
     * [Examples](#examples)
 
@@ -46,6 +50,8 @@ Here is an example of a simple automation sequence to show how it looks when a s
 
 1. **New Automation Sequence** - Creates a new automation sequence
 2. **Load Automation Sequence** - Loads a saved automation sequence .json file
+
+[Back to top](#)
 
 ## Automation Sequence
 
@@ -81,6 +87,8 @@ Here is an example of a simple automation sequence to show how it looks when a s
         * [**Alert**](#alert-action) - Pops up an alert with a user-defined message.
         * [**Email**](#email-action) - Sends an email, can include module data.
 
+[Back to top](#)
+
 ## Automations
 Automations for both triggers and actions are structured like this:
 
@@ -100,6 +108,8 @@ The current active automation will be highlighted green.
 6. **Move Up Button** - Moves the automation up in the sequence.
 7. **Move Down Button** - Moves the automation down in the sequence.
 8. **Automation Contents** - The contents of the automation. This is different for each type of automation.
+
+[Back to top](#)
 
 ### Triggers
 
@@ -122,6 +132,8 @@ The serial message trigger listens to all of the serial devices connected throug
     * **Ends with** - The serial message ends with the user-defined message.
         * E.g. "TTL Pulse 1" ends with "Pulse 1"
 
+[Back to top](#)
+
 #### Module Trigger
 The module trigger listens for certain module-specific events. This can be for a single module or any connected module.
 
@@ -137,6 +149,8 @@ The module trigger listens for certain module-specific events. This can be for a
     * **Disconnected** - The module was disconnected via Bluetooth.
     * **Reset** - The module was reset.
     * **Battery Percentage** - The battery percentage is compared to a user-defined value.
+
+[Back to top](#)
 
 #### Pin Trigger
 The pin trigger listens for certain pin-specific events. This can be for a single module or any connected module.
@@ -166,13 +180,142 @@ The pin trigger listens for certain pin-specific events. This can be for a singl
     * **Voltage** - The pin voltage is compared to a user-defined value.
     * **Resistance** - The pin resistance is compared to a user-defined value.
 
-#### Pin Trigger
+[Back to top](#)
+
+#### Manual Trigger
 The manual trigger provides a button for the user to press to manually progress the sequence.
 
 <p align="center">
     <img src='{{ "/assets/img/gui/using/sequence/Trigger-Manual.png" | relative_url }}' alt='Manual Trigger' width="60%">
 </p>
 
+[Back to top](#)
+
 ### Actions
+
+#### Time Delay Action
+The time delay action delays the sequence for a user-defined amount of time, then resumes the sequence once complete.
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/sequence/Action-Time.png" | relative_url }}' alt='Time Delay Action' width="60%">
+</p>
+
+**Parameters**
+* **Duration (ms)** - The amount of time to delay the sequence.
+
+[Back to top](#)
+
+#### Module Action
+Module actions are module specific actions, and can also affect multiple pins at once.
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/sequence/Action-Module.png" | relative_url }}' alt='Module Action' width="60%">
+</p>
+
+**Parameters**
+* **Module** - The connected module to perform this action on.
+    * Select `All` to apply this to all of the connected modules.
+* **Actions**
+    * **Start Pins** - Starts the selected pins on the module.
+    * **Stop Pins** - Stops the selected pins on the module.
+    * **Reset** - Resets the module.
+    * **Export Data** - Exports the module's data.
+        * **Choose folder...** - Choose the folder to export the data to.
+    * **Clear Data** - Clears the module's data.
+
+[Back to top](#)
+
+#### Pin Action
+Pin actions are pin-specific actions.
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/sequence/Action-Pin.png" | relative_url }}' alt='Pin Action' width="60%">
+</p>
+
+**Parameters**
+* **Module** - The connected module to perform this action on.
+    * Select `All` to apply this to all of the connected modules.
+* **Pin** - The module's pin to perform this action on.
+* **Pin Types**
+    * **Blue/Green/Red LED**
+        * **Actions**
+            * **Start** - Starts the LED pulse waveform.
+            * **Stop** - Stops the LED pulse waveform.
+            * **On** - Turns the LED on.
+            * **Off** - Turns the LED off.
+            * **Apply Settings** - Applies the settings configured by the settings button. See [LED Pin Settings]({{ "/gui/using/pins/#led-pin-settings" | relative_url }}) for more details.
+        * **Settings Button** - Opens up a settings menu exclusively for this automation.
+        * **PWM/Analog** - Be sure to select the correct module type when using "Apply Settings". This doesn't matter when doing other actions, such as "Start".
+    * **Heater**
+        * **Actions**
+            * **Start** - Starts the heater pulse.
+            * **Stop** - Stops the heater pulse.
+            * **On** - Turns the heater on.
+            * **Off** - Turns the heater off.
+            * **Apply Settings** - Applies the settings configured by the settings button. See [Heater Pin Settings]({{ "/gui/using/pins/#heater-pin-settings" | relative_url }}) for more details.
+        * **Settings Button** - Opens up a settings menu exclusively for this automation.
+        * **PWM/Analog** - Be sure to select the correct module type when using "Apply Settings". This doesn't matter when doing other actions, such as "Start".
+    * **Temperature**
+        * **Actions**
+            * **Start** - Starts recording temperature.
+            * **Stop** - Stops recording temperature.
+            * **Take Reading** - Makes a single temperature measurement.
+            * **Apply Settings** - Applies the settings configured by the settings button. See [Temperature Pin Settings]({{ "/gui/using/pins/#temperature-pin-settings" | relative_url }}) for more details.
+        * **Settings Button** - Opens up a settings menu exclusively for this automation.
+        * **PWM/Analog** - Be sure to select the correct module type when using "Apply Settings". This doesn't matter when doing other actions, such as "Start".
+    * **Voltage**
+        * **Actions**
+            * **Start** - Starts recording voltage.
+            * **Stop** - Stops recording voltage.
+            * **Take Reading** - Makes a single voltage measurement.
+            * **Apply Settings** - Applies the settings configured by the settings button. See [Voltage Pin Settings]({{ "/gui/using/pins/#voltage-pin-settings" | relative_url }}) for more details.
+        * **Settings Button** - Opens up a settings menu exclusively for this automation.
+        * **PWM/Analog** - Be sure to select the correct module type when using "Apply Settings". This doesn't matter when doing other actions, such as "Start".
+    * **Resistance**
+        * **Actions**
+            * **Start** - Starts recording resistance.
+            * **Stop** - Stops recording resistance.
+            * **Take Reading** - Makes a single resistance measurement.
+            * **Apply Settings** - Applies the settings configured by the settings button. See [Resistance Pin Settings]({{ "/gui/using/pins/#resistance-pin-settings" | relative_url }}) for more details.
+        * **Settings Button** - Opens up a settings menu exclusively for this automation.
+        * **PWM/Analog** - Be sure to select the correct module type when using "Apply Settings". This doesn't matter when doing other actions, such as "Start".
+
+[Back to top](#)
+
+#### Alert Action
+The alert action pops up an alert with a user-defined message. The sequence will pause until the user dismisses the alert.
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/sequence/Action-Alert.png" | relative_url }}' alt='Alert Action' width="60%">
+</p>
+
+**Parameters**
+* **Message** - The message to display in the alert.
+
+[Back to top](#)
+
+#### Email Action
+The email action will send an email to specified email addresses and can include the data from all of the modules.
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/sequence/Action-Email.png" | relative_url }}' alt='Email Action' width="60%">
+</p>
+
+**Parameters**
+* **From** - The email address the email will be sent from.
+    * This must be a Gmail address.
+* **App Password** - In order to use the email action, you must [generate an app password](https://support.google.com/accounts/answer/185833?hl=en).
+    * Do NOT use your regular password, only a generated app password.
+    * Be warned that saving the automation sequence will store the app password in the generated .json file, so be careful when sharing automation sequences that contain your app password!
+        * I recommend clearing out the "From" and "App Password" fields when sharing an automation sequence that uses an email action.
+* **To** - Email addresses that the email should be sent to.
+    * You can input multiple email addresses separated by commas (no spaces). For example, "myemail@gmail.com,anotheremail@mit.edu"
+    * These email addresses do not need to be Gmail addresses.
+* **Subject** - The email's subject line.
+* **Body** - The email's body.
+* **Send module data** - Check this to send data from every module.
+    * This will export the data from every module that is listed, even if they are disconnected.
+
+[Back to top](#)
 
 ## Examples
