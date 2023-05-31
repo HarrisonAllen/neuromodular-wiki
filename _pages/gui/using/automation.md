@@ -21,6 +21,11 @@ base: /gui/
             * [Pin Trigger](#pin-trigger)
             * [Manual Trigger](#manual-trigger)
         * [Actions](#actions)
+            * [Time Delay](#time-delay-action)
+            * [Module](#module-action)
+            * [Pin](#pin-action)
+            * [Alert](#alert-action)
+            * [Email](#email-action)
     * [Examples](#examples)
 
 ## Automation Sequence Introduction
@@ -48,7 +53,7 @@ Here is an example of a simple automation sequence to show how it looks when a s
     <img src='{{ "/assets/img/gui/using/sequence/01-MainButtons.png" | relative_url }}' alt='The automation sequence manager' width="60%">
 </p>
 
-1. **New Automation Sequence** - Creates a new automation sequence
+1. **New Automation Sequence** - Creates a new automation sequence.
 2. **Load Automation Sequence** - Loads a saved automation sequence .json file
 
 [Back to top](#)
@@ -101,7 +106,7 @@ The current active automation will be highlighted green.
 1. **Visibility Button** - Toggles the visibility of the automation.
     * The automation will still run when hidden.
 2. **Enable Button** - Toggles if the automation is enabled.
-    * The automation will not run when disabled.
+    * The automation will be skipped when disabled.
 3. **Automation Name** - The automation's name.
 4. **Duplicate Button** - Duplicates the automation.
 5. **Delete Button** - Deletes the automation.
@@ -148,7 +153,7 @@ The module trigger listens for certain module-specific events. This can be for a
     * **Connected** - The module was connected via Bluetooth.
     * **Disconnected** - The module was disconnected via Bluetooth.
     * **Reset** - The module was reset.
-    * **Battery Percentage** - The battery percentage is compared to a user-defined value.
+    * **Battery Percentage** - The module's battery percentage is compared to a user-defined value.
 
 [Back to top](#)
 
@@ -206,7 +211,7 @@ The time delay action delays the sequence for a user-defined amount of time, the
 [Back to top](#)
 
 #### Module Action
-Module actions are module specific actions, and can also affect multiple pins at once.
+Module actions are module specific actions, and can also affect multiple pins at once. This can be for a single module or all connected modules.
 
 <p align="center">
     <img src='{{ "/assets/img/gui/using/sequence/Action-Module.png" | relative_url }}' alt='Module Action' width="60%">
@@ -226,7 +231,7 @@ Module actions are module specific actions, and can also affect multiple pins at
 [Back to top](#)
 
 #### Pin Action
-Pin actions are pin-specific actions.
+Pin actions are pin-specific actions. This can be for a single module or all connected modules.
 
 <p align="center">
     <img src='{{ "/assets/img/gui/using/sequence/Action-Pin.png" | relative_url }}' alt='Pin Action' width="60%">
@@ -306,7 +311,7 @@ The email action will send an email to specified email addresses and can include
     * This must be a Gmail address.
 * **App Password** - In order to use the email action, you must [generate an app password](https://support.google.com/accounts/answer/185833?hl=en).
     * Do NOT use your regular password, only a generated app password.
-    * Be warned that saving the automation sequence will store the app password in the generated .json file, so be careful when sharing automation sequences that contain your app password!
+    * Be warned that saving the automation sequence will store the app password in the generated .json file, so be careful not to share automation sequences that contain your app password!
         * I recommend clearing out the "From" and "App Password" fields when sharing an automation sequence that uses an email action.
 * **To** - Email addresses that the email should be sent to.
     * You can input multiple email addresses separated by commas (no spaces). For example, "myemail@gmail.com,anotheremail@mit.edu"
@@ -319,3 +324,17 @@ The email action will send an email to specified email addresses and can include
 [Back to top](#)
 
 ## Examples
+Here I have prepared examples for you to download and try out.
+
+### Send data when battery is low
+1. Wait for the module battery to go below 5%
+2. Stop all of the pins on the module
+3. Send an email notifying that the module has run out of battery, and include the module's data.
+
+[Download `Send data when low on battery.json`]({{ "/assets/files/gui/using/sequence/examples/Send data when low on battery.json" | relative_url }})
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/sequence/examples/Send data when low on battery.png" | relative_url }}' alt='Send data when low on battery preview' width="60%">
+</p>
+
+[Back to top](#)

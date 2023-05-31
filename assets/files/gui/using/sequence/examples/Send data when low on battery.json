@@ -1,0 +1,60 @@
+{
+    "name": "Send data when low on battery",
+    "visible": true,
+    "enabled": true,
+    "repeats": false,
+    "sequence": [
+        {
+            "automation_type": [
+                "trigger",
+                "Module"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "module": "4.P",
+                "trigger": "Battery Percentage",
+                "battery_comparer": {
+                    "comparator": "<",
+                    "comparison": "5",
+                    "absolute_value": false
+                }
+            }
+        },
+        {
+            "automation_type": [
+                "action",
+                "Module"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "module": "4.P",
+                "action": "Stop Pins",
+                "pins": [
+                    true,
+                    true,
+                    true,
+                    true
+                ],
+                "export": ""
+            }
+        },
+        {
+            "automation_type": [
+                "action",
+                "Email"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "sender": "youremail",
+                "password": "yourapppassword",
+                "recipients": "someemail@email.com,otheremail@email.com",
+                "subject": "Module 4.P out of battery",
+                "body": "Module 4.P has run out of battery. The module has been stopped.\n\nThe data for the modules is attached.",
+                "send_data": true
+            }
+        }
+    ]
+}
