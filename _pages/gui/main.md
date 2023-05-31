@@ -4,7 +4,7 @@ title: GUI
 permalink: /gui/
 ---
 
-# This is where you'd go to get information about the GUI
+# GUI Information
 
 <!-- ![An array of completed modules]({{ "/assets/img/modules/module_array.jpg" | relative_url }}) -->
 <!-- <p align="center">
