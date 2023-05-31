@@ -103,6 +103,76 @@ The current active automation will be highlighted green.
 
 ### Triggers
 
+#### Serial Message Trigger
+The serial message trigger listens to all of the serial devices connected through the [Port Manager]({{ "/gui/using/#port-manager" | relative_url }}). The automation is triggered when a serial message matches the user-defined message.
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/sequence/Trigger-Serial.png" | relative_url }}' alt='Serial Message Trigger' width="60%">
+</p>
+
+**Parameters**
+* **Message** - The user-defined message this trigger is listening for
+* **Match type** - The way the serial message has to match the user-defined message.
+    * **Exact** - The serial message is exactly the same as the user-defined message.
+        * E.g. "TTL Pulse 1" exactly matches "TTL Pulse 1"
+    * **Contains** - The serial message contains the user-defined message.
+        * E.g. "TTL Pulse 1" contains "Pulse"
+    * **Starts with** - The serial message starts with the user-defined message.
+        * E.g. "TTL Pulse 1" starts with "TTL"
+    * **Ends with** - The serial message ends with the user-defined message.
+        * E.g. "TTL Pulse 1" ends with "Pulse 1"
+
+#### Module Trigger
+The module trigger listens for certain module-specific events. This can be for a single module or any connected module.
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/sequence/Trigger-Module.png" | relative_url }}' alt='Module Trigger' width="60%">
+</p>
+
+**Parameters**
+* **Module** - The connected module to listen to.
+    * Select `Any` to listen to all of the connected modules.
+* **Events**
+    * **Connected** - The module was connected via Bluetooth.
+    * **Disconnected** - The module was disconnected via Bluetooth.
+    * **Reset** - The module was reset.
+    * **Battery Percentage** - The battery percentage is compared to a user-defined value.
+
+#### Pin Trigger
+The pin trigger listens for certain pin-specific events. This can be for a single module or any connected module.
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/sequence/Trigger-Pin.png" | relative_url }}' alt='Pin Trigger' width="60%">
+</p>
+
+**Parameters**
+* **Module** - The connected module to listen to.
+    * Select `Any` to listen to all of the connected modules.
+* **Pin** - The module's pin to listen to.
+* **Pin Types**
+    * **Blue/Green/Red LED**
+        * **Start** - The LED pulse waveform has started.
+        * **Stop** - The LED pulse waveform has stopped.
+        * **Pulse** - The pulsing segment of the LED pulse waveform has started.
+        * **Rest** - The resting segment of the LED pulse waveform has started.
+        * **On** - The LED has turned on manually.
+        * **Off** - The LED has turned off manually.
+    * **Heater**
+        * **Start** - The heater pulse has started.
+        * **Stop** - The heater pulse has stopped.
+        * **On** - The heater has turned on manually.
+        * **Off** - The heater has turned off manually.
+    * **Temperature** - The pin temperature is compared to a user-defined value.
+    * **Voltage** - The pin voltage is compared to a user-defined value.
+    * **Resistance** - The pin resistance is compared to a user-defined value.
+
+#### Pin Trigger
+The manual trigger provides a button for the user to press to manually progress the sequence.
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/sequence/Trigger-Manual.png" | relative_url }}' alt='Manual Trigger' width="60%">
+</p>
+
 ### Actions
 
 ## Examples
