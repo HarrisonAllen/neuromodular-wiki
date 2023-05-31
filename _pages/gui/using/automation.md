@@ -27,6 +27,11 @@ base: /gui/
             * [Alert](#alert-action)
             * [Email](#email-action)
     * [Examples](#examples)
+        * [Send data when low on battery](#send-data-when-low-on-battery)
+        * [TTL Pulse Received](#ttl-pulse-received)
+        * [Stimulate when delta threshold reached](#stimulate-when-delta-threshold-reached)
+        * [Module start synchronized with other module](#module-start-synchronized-with-other-module)
+        * [Stop temperature measurement while LED pulsing](#stop-temperature-measurement-while-led-pulsing)
 
 ## Automation Sequence Introduction
 Automation sequences allow for automated control of modules based on various triggers. 
@@ -325,6 +330,7 @@ Here I have prepared automation sequence examples for you to download and try ou
 * **Requirements**:
     * Blue dev board connected via [Port Manager]({{ "/gui/using/#port-manager" | relative_url }})
     * One connected module
+
 1. **Module Trigger** - Wait for the battery on Module 4.P to go below 5%
 2. **Module Action** - Stop all of the pins on Module 4.P
 3. **Email Action** - Send an email notifying that Module 4.P has run out of battery, and include the module's data
@@ -342,6 +348,7 @@ Here I have prepared automation sequence examples for you to download and try ou
     * Blue dev board connected via [Port Manager]({{ "/gui/using/#port-manager" | relative_url }})
     * An Arduino UNO running [TTL-Detector.zip](https://github.com/HarrisonAllen/neuromodular-wiki/files/11567609/TTL-Detector.zip) and connected via the [Port Manager]({{ "/gui/using/#port-manager" | relative_url }})
     * One connected module with an LED pin
+
 1. **Serial Message Trigger** - Wait for the exact message "TTL Pulse 1" to come over serial
 2. **Pin Action** - On Module 23.A Pin 1 start the Blue LED
 3. **Time Delay Action** - Delay for 5000 ms (5 seconds)
@@ -360,6 +367,7 @@ Here I have prepared automation sequence examples for you to download and try ou
 * **Requirements**:
     * Blue dev board connected via [Port Manager]({{ "/gui/using/#port-manager" | relative_url }})
     * One connected module with two temperature pins in delta mode
+
 1. **Pin Trigger** - Wait for the absolute value of the temperature measurement on Module 3.P Pin 3 (the primary pin) to be greater than 2&#176;C
 2. **Pin Action** - On Module 3.P Pin 1 apply the Green LED settings 
 3. **Pin Action** - On Module 3.P Pin 1 start the Green LED 
@@ -379,6 +387,7 @@ Here I have prepared automation sequence examples for you to download and try ou
 * **Requirements**:
     * Blue dev board connected via [Port Manager]({{ "/gui/using/#port-manager" | relative_url }})
     * Two connected modules each with an LED pin
+
 1. **Pin Trigger** - Wait for the Blue LED on Module 4.P Pin 1 to start
 2. **Pin Action** - On Module 3.P Pin 1 start the Blue LED 
 3. *Repeat*
@@ -395,6 +404,7 @@ Here I have prepared automation sequence examples for you to download and try ou
 * **Requirements**:
     * Blue dev board connected via [Port Manager]({{ "/gui/using/#port-manager" | relative_url }})
     * One connected module with an LED pin and a temperature pin
+
 1. **Pin Trigger** - Wait for the Blue LED on Module 4.P Pin 1 to pulse
 2. **Pin Action** - On Module 4.P Pin 4 stop recording temperature
 3. **Pin Trigger** - Wait for the Blue LED on Module 4.P Pin 1 to rest
