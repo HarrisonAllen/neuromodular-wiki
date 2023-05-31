@@ -75,10 +75,10 @@ Here's an example of a module that's been set up with the following pin layout:
             </p>
 2. **Pulse Selection Radio Buttons** - Switch between two pulse waveforms as defined in the settings.
     * This allows for quickly switching between two different waveforms.
-3. **Start** - Starts the current LED pulse waveform.
-4. **Stop** - Stops the current LED pulse waveform.
+3. **Start Button** - Starts the current LED pulse waveform.
+4. **Stop Button** - Stops the current LED pulse waveform.
     * Once stopped, the LED pin will turn off.
-5. [**Settings**](#led-pin-settings) - Settings for the LED pin.
+5. [**Settings Button**](#led-pin-settings) - Settings for the LED pin.
 6. **Graph Display Toggle** - Toggles the visibility of the LED pin on the module's graph.
     * This can help declutter the graph by hiding unnecessary data.
 
@@ -150,10 +150,10 @@ Here's an example of a module that's been set up with the following pin layout:
             <p align="center">
                 <img src='{{ "/assets/img/gui/using/pins/04c-HeaterPinPulsing.png" | relative_url }}' alt='Heater Pin Pulsing'>
             </p>
-2. **Start** - Starts the Heater pulse.
-3. **Stop** - Stops the Heater pulse.
+2. **Start Button** - Starts the Heater pulse.
+3. **Stop Button** - Stops the Heater pulse.
     * Once stopped, the Heater pin will turn off.
-4. [**Settings**](#heater-pin-settings) - Settings for the Heater pin.
+4. [**Settings Button**](#heater-pin-settings) - Settings for the Heater pin.
 5. **Graph Display Toggle** - Toggles the visibility of the Heater pin on the module's graph.
     * This can help declutter the graph by hiding unnecessary data.
 
@@ -191,9 +191,9 @@ Here's an example of a module that's been set up with the following pin layout:
     * The manual reading will ignore the delta settings.
 2. **Current Temperature Reading (&#176;C)** - Displays the last measured temperature reading from the pin.
 3. **Delta Settings** - Designates another pin on the module to measure the temperature delta between. See [Temperature Pin Delta](#temperature-pin-delta) for more information.
-4. **Start** - Starts measuring temperature.
-5. **Stop** - Stops measuring temperature.
-6. [**Settings**](#temperature-pin-settings) - Settings for the temperature pin.
+4. **Start Button** - Starts measuring temperature.
+5. **Stop Button** - Stops measuring temperature.
+6. [**Settings Button**](#temperature-pin-settings) - Settings for the temperature pin.
 7. **Graph Display Toggle** - Toggles the visibility of the temperature pin on the module's graph.
     * This can help declutter the graph by hiding unnecessary data.
 
@@ -262,9 +262,9 @@ Here's an example of a module that's been set up with the following pin layout:
     * The manual reading will ignore the delta settings.
 2. **Current Voltage Reading (V)** - Displays the last measured voltage reading from the pin.
 3. **Delta Settings** - Designates another pin on the module to measure the voltage delta between. See [Temperature Pin Delta](#temperature-pin-delta) for more information. (It's the same for voltage.)
-4. **Start** - Starts measuring voltage.
-5. **Stop** - Stops measuring voltage.
-6. [**Settings**](#voltage-pin-settings) - Settings for the voltage pin.
+4. **Start Button** - Starts measuring voltage.
+5. **Stop Button** - Stops measuring voltage.
+6. [**Settings Button**](#voltage-pin-settings) - Settings for the voltage pin.
 7. **Graph Display Toggle** - Toggles the visibility of the voltage pin on the module's graph.
     * This can help declutter the graph by hiding unnecessary data.
 
@@ -304,9 +304,9 @@ Here's an example of a module that's been set up with the following pin layout:
     * The manual reading will ignore the delta settings.
 2. **Current Resistance Reading (k&#8486;)** - Displays the last measured resistance reading from the pin.
 3. **Delta Settings** - Designates another pin on the module to measure the resistance delta between. See [Temperature Pin Delta](#temperature-pin-delta) for more information. (It's the same for resistance.)
-4. **Start** - Starts measuring resistance.
-5. **Stop** - Stops measuring resistance.
-6. [**Settings**](#resistance-pin-settings) - Settings for the resistance pin.
+4. **Start Button** - Starts measuring resistance.
+5. **Stop Button** - Stops measuring resistance.
+6. [**Settings Button**](#resistance-pin-settings) - Settings for the resistance pin.
 7. **Graph Display Toggle** - Toggles the visibility of the resistance pin on the module's graph.
     * This can help declutter the graph by hiding unnecessary data.
 
