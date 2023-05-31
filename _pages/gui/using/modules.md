@@ -61,6 +61,7 @@ The Module Controllers allow for control of multiple modules.
     * If the module is disconnected, the controller will turn red such as Module 3.P on the right. The [module's graph](#module-graphs) will also turn red.
 3. **Battery Percentage** - Shows the approximate battery percentage remaining on the module.
     * You can hover over the icon for a more detailed percentage and battery voltage measurement.
+    * The battery percentage is updated every 5 seconds.
 4. **Reset** - Resets the module
 5. **Stop Everything** - Stops every pin on the module.
 6. **Open Config** - Opens a saved module config file.
@@ -80,5 +81,3 @@ The Module Graphs display data from the modules.
 3. **Export Data** - Exports the data for this module.
     * The data will be automatically exported into a folder, so you will have to select the directory where you want that folder to be created.
 4. **Clear Data** - Clears all recorded data for that module.
-
-## Real Data Example
