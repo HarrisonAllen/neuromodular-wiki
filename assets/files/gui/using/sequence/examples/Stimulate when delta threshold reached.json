@@ -1,0 +1,108 @@
+{
+    "name": "Stimulate when delta threshold reached",
+    "visible": true,
+    "enabled": true,
+    "repeats": true,
+    "sequence": [
+        {
+            "automation_type": [
+                "trigger",
+                "Pin"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "module": "3.P",
+                "pin": "3",
+                "pin_type": "Temperature",
+                "trigger": {
+                    "comparator": ">",
+                    "comparison": "2",
+                    "absolute_value": true
+                }
+            }
+        },
+        {
+            "automation_type": [
+                "action",
+                "Pin"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "module": "3.P",
+                "pin": "1",
+                "pin_type": "Green LED",
+                "pin_action": {
+                    "action": "Apply Settings",
+                    "parameters": {
+                        "parameters": {
+                            "M": "O",
+                            "r": 1,
+                            "V": 255,
+                            "P": 1000,
+                            "R": 2000,
+                            "n": 40,
+                            "f": 60
+                        },
+                        "pin type": "Green LED",
+                        "v_ref": 3.3,
+                        "pwm_max": 255,
+                        "v_steps": 4095,
+                        "module_type": "P"
+                    }
+                }
+            }
+        },
+        {
+            "automation_type": [
+                "action",
+                "Pin"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "module": "3.P",
+                "pin": "1",
+                "pin_type": "Green LED",
+                "pin_action": {
+                    "action": "Start"
+                }
+            }
+        },
+        {
+            "automation_type": [
+                "trigger",
+                "Pin"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "module": "3.P",
+                "pin": "3",
+                "pin_type": "Temperature",
+                "trigger": {
+                    "comparator": "<",
+                    "comparison": "1.5",
+                    "absolute_value": true
+                }
+            }
+        },
+        {
+            "automation_type": [
+                "action",
+                "Pin"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "module": "3.P",
+                "pin": "1",
+                "pin_type": "Green LED",
+                "pin_action": {
+                    "action": "Stop"
+                }
+            }
+        }
+    ]
+}

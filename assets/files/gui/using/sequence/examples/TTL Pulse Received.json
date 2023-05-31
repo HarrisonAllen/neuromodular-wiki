@@ -1,0 +1,63 @@
+{
+    "name": "TTL Pulse Received",
+    "visible": true,
+    "enabled": true,
+    "repeats": true,
+    "sequence": [
+        {
+            "automation_type": [
+                "trigger",
+                "Serial Message"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "message": "TTL Pulse 1",
+                "match": "Exact"
+            }
+        },
+        {
+            "automation_type": [
+                "action",
+                "Pin"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "module": "23.A",
+                "pin": "1",
+                "pin_type": "Blue LED",
+                "pin_action": {
+                    "action": "Start"
+                }
+            }
+        },
+        {
+            "automation_type": [
+                "action",
+                "Time Delay"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "duration": "5000"
+            }
+        },
+        {
+            "automation_type": [
+                "action",
+                "Pin"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "module": "23.A",
+                "pin": "1",
+                "pin_type": "Blue LED",
+                "pin_action": {
+                    "action": "Stop"
+                }
+            }
+        }
+    ]
+}

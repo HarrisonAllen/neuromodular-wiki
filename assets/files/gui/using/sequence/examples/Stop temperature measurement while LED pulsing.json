@@ -1,0 +1,68 @@
+{
+    "name": "Stop temperature measurement while LED pulsing",
+    "visible": true,
+    "enabled": true,
+    "repeats": true,
+    "sequence": [
+        {
+            "automation_type": [
+                "trigger",
+                "Pin"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "module": "4.P",
+                "pin": "1",
+                "pin_type": "Green LED",
+                "trigger": "Pulse"
+            }
+        },
+        {
+            "automation_type": [
+                "action",
+                "Pin"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "module": "4.P",
+                "pin": "4",
+                "pin_type": "Temperature",
+                "pin_action": {
+                    "action": "Stop"
+                }
+            }
+        },
+        {
+            "automation_type": [
+                "trigger",
+                "Pin"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "module": "4.P",
+                "pin": "1",
+                "pin_type": "Green LED",
+                "trigger": "Rest"
+            }
+        },
+        {
+            "automation_type": [
+                "action",
+                "Pin"
+            ],
+            "visible": false,
+            "enabled": true,
+            "parameters": {
+                "module": "4.P",
+                "pin": "4",
+                "pin_type": "Temperature",
+                "pin_action": {
+                    "action": "Start"
+                }
+            }
+        }
+    ]
+}

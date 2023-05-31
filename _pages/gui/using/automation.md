@@ -29,12 +29,7 @@ base: /gui/
     * [Examples](#examples)
 
 ## Automation Sequence Introduction
-Automation sequences allow for automated control of modules based on various triggers. For example, you could perform the following sequence using automations:
-1. Trigger: Serial message "TTL Pulse 1" received
-2. Action: Start stimulation on Module 3.P Pin 1 (Blue LED)
-3. Action: Delay 5 seconds
-4. Action: Stop stimulation on Module 3.P Pin 1 (Blue LED)
-5. Repeat
+Automation sequences allow for automated control of modules based on various triggers. 
 
 Here is an example of a simple automation sequence to show how it looks when a sequence is running:
 1. Trigger: Manual
@@ -324,17 +319,92 @@ The email action will send an email to specified email addresses and can include
 [Back to top](#)
 
 ## Examples
-Here I have prepared examples for you to download and try out.
+Here I have prepared automation sequence examples for you to download and try out.
 
-### Send data when battery is low
-1. Wait for the module battery to go below 5%
-2. Stop all of the pins on the module
-3. Send an email notifying that the module has run out of battery, and include the module's data.
+### Send data when low on battery
+* **Requirements**:
+    * Blue dev board connected via [Port Manager]({{ "/gui/using/#port-manager" | relative_url }})
+    * One connected module
+1. **Module Trigger** - Wait for the battery on Module 4.P to go below 5%
+2. **Module Action** - Stop all of the pins on Module 4.P
+3. **Email Action** - Send an email notifying that Module 4.P has run out of battery, and include the module's data
 
 [Download `Send data when low on battery.json`]({{ "/assets/files/gui/using/sequence/examples/Send data when low on battery.json" | relative_url }})
 
 <p align="center">
     <img src='{{ "/assets/img/gui/using/sequence/examples/Send data when low on battery.png" | relative_url }}' alt='Send data when low on battery preview' width="60%">
+</p>
+
+[Back to top](#)
+
+### TTL Pulse Received
+* **Requirements**:
+    * Blue dev board connected via [Port Manager]({{ "/gui/using/#port-manager" | relative_url }})
+    * An Arduino UNO running [TTL-Detector.zip](https://github.com/HarrisonAllen/neuromodular-wiki/files/11567609/TTL-Detector.zip) and connected via the [Port Manager]({{ "/gui/using/#port-manager" | relative_url }})
+    * One connected module with an LED pin
+1. **Serial Message Trigger** - Wait for the exact message "TTL Pulse 1" to come over serial
+2. **Pin Action** - On Module 23.A Pin 1 start the Blue LED
+3. **Time Delay Action** - Delay for 5000 ms (5 seconds)
+4. **Pin Action** - On Module 23.A Pin 1 stop the Blue LED
+5. *Repeat*
+
+[Download `TTL Pulse Received.json`]({{ "/assets/files/gui/using/sequence/examples/TTL Pulse Received.json" | relative_url }})
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/sequence/examples/TTL Pulse Received.png" | relative_url }}' alt='TTL Pulse Received preview' width="60%">
+</p>
+
+[Back to top](#)
+
+### Stimulate when delta threshold reached
+* **Requirements**:
+    * Blue dev board connected via [Port Manager]({{ "/gui/using/#port-manager" | relative_url }})
+    * One connected module with two temperature pins in delta mode
+1. **Pin Trigger** - Wait for the absolute value of the temperature measurement on Module 3.P Pin 3 (the primary pin) to be greater than 2&#176;C
+2. **Pin Action** - On Module 3.P Pin 1 apply the Green LED settings 
+3. **Pin Action** - On Module 3.P Pin 1 start the Green LED 
+4. **Pin Trigger** - Wait for the absolute value of the temperature measurement on Module 3.P Pin 3 (the primary pin) to be less than 1.5&#176;C
+5. **Pin Action** - On Module 3.P Pin 1 stop the Green LED 
+6. *Repeat*
+
+[Download `Stimulate when delta threshold reached.json`]({{ "/assets/files/gui/using/sequence/examples/Stimulate when delta threshold reached.json" | relative_url }})
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/sequence/examples/Stimulate when delta threshold reached.png" | relative_url }}' alt='Stimulate when delta threshold reached preview' width="60%">
+</p>
+
+[Back to top](#)
+
+### Module start synchronized with other module 
+* **Requirements**:
+    * Blue dev board connected via [Port Manager]({{ "/gui/using/#port-manager" | relative_url }})
+    * Two connected modules each with an LED pin
+1. **Pin Trigger** - Wait for the Blue LED on Module 4.P Pin 1 to start
+2. **Pin Action** - On Module 3.P Pin 1 start the Blue LED 
+3. *Repeat*
+
+[Download `Module start synchronized with other module.json`]({{ "/assets/files/gui/using/sequence/examples/Module start synchronized with other module.json" | relative_url }})
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/sequence/examples/Module start synchronized with other module.png" | relative_url }}' alt='Module start synchronized with other module preview' width="60%">
+</p>
+
+[Back to top](#)
+
+### Stop temperature measurement while LED pulsing 
+* **Requirements**:
+    * Blue dev board connected via [Port Manager]({{ "/gui/using/#port-manager" | relative_url }})
+    * One connected module with an LED pin and a temperature pin
+1. **Pin Trigger** - Wait for the Blue LED on Module 4.P Pin 1 to pulse
+2. **Pin Action** - On Module 4.P Pin 4 stop recording temperature
+3. **Pin Trigger** - Wait for the Blue LED on Module 4.P Pin 1 to rest
+4. **Pin Action** - On Module 4.P Pin 4 start recording temperature 
+5. *Repeat*
+
+[Download `Stop temperature measurement while LED pulsing.json`]({{ "/assets/files/gui/using/sequence/examples/Stop temperature measurement while LED pulsing.json" | relative_url }})
+
+<p align="center">
+    <img src='{{ "/assets/img/gui/using/sequence/examples/Stop temperature measurement while LED pulsing.png" | relative_url }}' alt='Stop temperature measurement while LED pulsing preview' width="60%">
 </p>
 
 [Back to top](#)
