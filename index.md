@@ -7,9 +7,9 @@ title: Neuromodular Wiki
 
 [**GUI Information**]({{ "/gui/" | relative_url }})
 
-[**Blue Dev Board Information**]({{ "/blue-board/" | relative_url }})
-
 [**Module Information**]({{ "/modules/" | relative_url }})
+
+[**Blue Dev Board Information**]({{ "/blue-board/" | relative_url }})
 
 <!-- <div class="alignwrapper">
     <div class="alignleft">
