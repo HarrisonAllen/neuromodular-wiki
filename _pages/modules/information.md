@@ -8,6 +8,7 @@ next: /modules/assembly/
 ---
 
 ## General Information
+
 | Parameter | Value | 
 |  ---  |  ---  | 
 | <b># input/output channels</b> | 3 (4 pins, 1 reserved for ground) | 
@@ -54,6 +55,7 @@ You can use any component that can work with this kind of voltage divider circui
 On the modules above, the circuits are configured as follows:
 
 ### Module 4.P *(left module)*
+
 | Pin | Fiber Component | Ground Jumper | Resistor Jumper | Resistor | 
 |  ---  |  ---  |  ---  |  ---  |  ---  | 
 | 1 | Blue LED |  | Soldered | 0 Ohms | 
@@ -62,6 +64,7 @@ On the modules above, the circuits are configured as follows:
 | 4 | 10k Ohm NTC |  | Soldered | 10k Ohms | 
 
 ### Module 23.A *(right module)*
+
 | Pin | Fiber Component | Ground Jumper | Resistor Jumper | Resistor | 
 |  ---  |  ---  |  ---  |  ---  |  ---  | 
 | 1 | Ground | Soldered |  |  | 
