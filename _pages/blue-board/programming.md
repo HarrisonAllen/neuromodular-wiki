@@ -1,8 +1,8 @@
 ---
 layout: topic
-title: Programming the Blue Board
+title: Blue Dev Board - Programming
 permalink: /blue-board/programming/
-previous: /blue-board/components/
+previous: /blue-board/setup/
 base: /blue-board/
 # next: 
 ---

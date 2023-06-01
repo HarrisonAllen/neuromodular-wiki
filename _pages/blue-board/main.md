@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Blue Board
+title: Blue Dev Board
 permalink: /blue-board/
 ---
 
-# This is where you'd go to get information about the blue board
+# Blue dev board information
 
 <!-- ![An array of completed modules]({{ "/assets/img/modules/module_array.jpg" | relative_url }}) -->
 <!-- <p align="center">
     <img src='{{ "/assets/img/modules/module_array.jpg" | relative_url }}' alt='An array of completed modules' width="60%">
 </p> -->
 
-For using the blue board:
-* [What's in the box]({{ "/blue-board/components/" | relative_url }})
+For using the blue dev board:
+* [Setting up the blue dev board]({{ "/blue-board/setup/" | relative_url }})
 
-For programming the blue board:
-* [Programming blue board firmware]({{ "/blue-board/programming/" | relative_url }})
+For programming the blue dev board:
+* [Programming blue dev board firmware]({{ "/blue-board/programming/" | relative_url }})
