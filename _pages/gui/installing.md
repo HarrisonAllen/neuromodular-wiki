@@ -7,8 +7,8 @@ base: /gui/
 next: /gui/using/
 ---
 
-## Current Installers (v1.2.1)
-* [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.2.1/NeuromodularSetup.exe)
+## Current Installers (v1.2.2)
+* [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.2.2/NeuromodularSetup.exe)
 
 ([Jump to changelogs](#changelogs))
 
@@ -31,6 +31,8 @@ next: /gui/using/
 7. You can now launch `Neuromodular`
 
 ## Changelogs
+* v1.2.2:
+    * Added link to the wiki in the settings menu
 * v1.2.1:
     * Automations are now complete! 
         * Missing features have been implemented including:
@@ -63,6 +65,8 @@ next: /gui/using/
     * Data export now uses seconds since epoch instead of datestring format
 
 ## Previous Installers
+* v1.2.1
+    * [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.2.1/NeuromodularSetup.exe)
 * v1.2.1b
     * [Download the Windows 10 installer here](https://github.com/HarrisonAllen/neuromodular-wiki/releases/download/v1.2.1b/NeuromodularSetup.exe)
 * v1.2.0b
