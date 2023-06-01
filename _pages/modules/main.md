@@ -4,21 +4,23 @@ title: Modules
 permalink: /modules/
 ---
 
-# This is where you'd go to get information about the modules
+# Module Information
 
 <!-- ![An array of completed modules]({{ "/assets/img/modules/module_array.jpg" | relative_url }}) -->
-<p align="center">
+<!-- <p align="center">
     <img src='{{ "/assets/img/modules/module_array.jpg" | relative_url }}' alt='An array of completed modules' width="60%">
-</p>
+</p> -->
 
-For using the modules:
-* [PWM vs Analog]({{ "/modules/differences/" | relative_url }})
-* [Configure module for fibers]({{ "/modules/configuration/" | relative_url }})
-* TODO: Add charging (include charge time of 10-15 minutes from 0% battery)
-* [Repurpose configured modules]({{ "/modules/repurpose/" | relative_url }})
-* [Adapters]({{ "/modules/adapters/" | relative_url }})
+Module notes
+* [Module information]({{ "/modules/information/" | relative_url }})
 
-For module maintainance:
-* [Assembling a new module]({{ "/modules/assembly/" | relative_url }})
-* [Ordering from PCBWay]({{ "/modules/ordering/" | relative_url }})
-* [Programming module firmware]({{ "/modules/programming/" | relative_url }})
+Module Assembly
+* [Assembling new modules]({{ "/modules/assembly/" | relative_url }})
+* [Configuring module for fibers]({{ "/modules/configuration/" | relative_url }})
+* [Adding a battery]({{ "/modules/battery/" | relative_url }})
+
+Module Programming
+* [Programming a module]({{ "/modules/programming/" | relative_url }})
+
+Other hardware
+* [Creating a charger]({{ "/modules/charger/" | relative_url }})

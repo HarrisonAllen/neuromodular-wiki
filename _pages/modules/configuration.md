@@ -1,18 +1,8 @@
 ---
 layout: topic
-title: Module Configuration
+title: Modules - Configuration
 permalink: /modules/configuration/
-previous: /modules/differences/
+previous: /modules/assembly/
 base: /modules/
-next: /modules/repurpose/
+next: /modules/battery/
 ---
-
-## Configuring a module for use with a fiber
-
-### Resistors
-
-### Headers
-
-### Power options
-
-And tons of pics ofc

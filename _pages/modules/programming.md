@@ -1,10 +1,8 @@
 ---
 layout: topic
-title: Module Programming
+title: Modules - Programming
 permalink: /modules/programming/
-previous: /modules/ordering/
+previous: /modules/battery/
 base: /modules/
-# next:
+next: /modules/charger/
 ---
-
-Oh boy yeah we're just going to have a combination of those two google docs laid out here
