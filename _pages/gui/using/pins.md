@@ -20,6 +20,8 @@ next: /gui/using/automation/
     * [Ground Pin](#ground-pin)
 * [Automation Sequence]({{ "/gui/using/automation/" | relative_url }})
 
+<p align="center"><div class="youtube-video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/rRCdax7kVeU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></p>
+
 ## Pin Selection
 There are 4 pins on a module. Each pin will have a corresponding function on the fiber. Use the dropdown to select the corresponding pin type.
 

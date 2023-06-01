@@ -33,6 +33,8 @@ base: /gui/
         * [Module start synchronized with other module](#module-start-synchronized-with-other-module)
         * [Stop temperature measurement while LED pulsing](#stop-temperature-measurement-while-led-pulsing)
 
+<p align="center"><div class="youtube-video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/u42rRyYcDGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></p>
+
 ## Automation Sequence Introduction
 Automation sequences allow for automated control of modules based on various triggers. 
 

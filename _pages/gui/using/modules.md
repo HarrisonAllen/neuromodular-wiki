@@ -14,9 +14,10 @@ next: /gui/using/pins/
     * [Module Sidebar](#module-sidebar)
     * [Module Controllers](#module-controllers)
     * [Module Graphs](#module-graphs)
-    * [Real Data Example](#real-data-example)
 * [Pin Control]({{ "/gui/using/pins/" | relative_url }})
 * [Automation Sequence]({{ "/gui/using/automation/" | relative_url }})
+
+<p align="center"><div class="youtube-video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/JO1YKMdT1vU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></p>
 
 ## Operation Example
 Here is what a connected module with two LEDs stimulating and one NTC recording temperature looks like:
