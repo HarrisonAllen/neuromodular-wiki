@@ -11,14 +11,15 @@ next: /modules/assembly/
 
 | Parameter | Value | 
 |  ---  |  ---  | 
-| <b># input/output channels</b> | 3 (4 pins, 1 reserved for ground) | 
-| <b>Max output frequency</b> | 1kHz | 
-| <b>Max input frequency</b> | 100Hz | 
-| <b>Max # connected modules</b> | 16 per blue dev board (can use multiple blue dev boards for more connections) | 
-| <b>Continuous stimulation runtime</b> | Up to 4 hours on battery, indefinite when wired | 
-| <b>Operating voltage</b> | 3.3V | 
-| <b>Minimum voltage supply</b> | 3.3V | 
-| <b>Maximum voltage supply</b> | 5V | 
+| **# input/output channels** | 3 (4 pins, 1 reserved for ground) | 
+| **Max output frequency** | 1kHz | 
+| **Max input frequency** | 100Hz | 
+| **Max # connected modules** | 16 per blue dev board (can use multiple blue dev boards for more connections) | 
+| **Continuous stimulation runtime** | Up to 4 hours on battery, indefinite when wired | 
+| **Operating voltage** | 3.3V | 
+| **Voltage supply range** | 3.3-5V |
+| **Fiber pin output range** | **PWM** - 3.3V at 0-100% duty cycle<br>**Analog** - 0-3.3V | 
+| **Fiber pin input range** | 0-3.3V | 
 
 ## Module Type Differences
 <p align="center">
