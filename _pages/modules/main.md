@@ -6,11 +6,6 @@ permalink: /modules/
 
 # Module Information
 
-<!-- ![An array of completed modules]({{ "/assets/img/modules/module_array.jpg" | relative_url }}) -->
-<!-- <p align="center">
-    <img src='{{ "/assets/img/modules/module_array.jpg" | relative_url }}' alt='An array of completed modules' width="60%">
-</p> -->
-
 Module notes
 * [Module information]({{ "/modules/information/" | relative_url }})
 
