@@ -12,7 +12,7 @@ next: /modules/programming/
 There are different power options that you can use:
 * Attached battery
     * This page covers the process for attaching a battery
-    * Charging information can be found [here](({{ "/modules/charger/" | relative_url }}))
+    * Charging information can be found [here]({{ "/modules/charger/" | relative_url }})
     * To power on the module, use a jumper to connect the `B` and `+` pins on the module power header.
     <p align="center">
         <img src='{{ "/assets/img/modules/battery/Using01.jpg"  |  relative_url }}' alt='Using' width="60%">
