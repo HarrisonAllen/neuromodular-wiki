@@ -7,6 +7,12 @@ base: /modules/
 next: /modules/programming/
 ---
 
+## Quick Links
+* [Power Options](#power-options)
+* [What you'll need](#what-youll-need)
+* [Attaching a small battery](#attaching-a-small-battery)
+* [Attaching a large battery](#attaching-a-large-battery)
+
 ## Power Options
 
 There are different power options that you can use:

@@ -7,6 +7,14 @@ base: /modules/
 next: /modules/charger/
 ---
 
+## Quick Links
+* [What you'll need](#what-youll-need)
+* [1. Set up the environment](#1-set-up-the-environment)
+* [2. Modify the firmware](#2-modify-the-firmware)
+* [3. Set up the hardware](#3-set-up-the-hardware)
+* [4. Program the module](#4-program-the-module)
+* [5. Testing the module](#5-testing-the-module)
+
 ## What you'll need:
 * **Hardware**:
     * A blue dev board with a [jtag programming attachment](https://www.tag-connect.com/product/tc2030-ctx-nl-6-pin-no-legs-cable-with-10-pin-micro-connector-for-cortex-processors)
@@ -21,11 +29,11 @@ next: /modules/charger/
     * [J-Link](https://www.segger.com/downloads/jlink/)
     * The Neuromodular github repo (only available to lab members)
     
-### 1. Set up the environment
+## 1. Set up the environment
 
 Install everything in the software section above.
 
-### 2. Modify the firmware
+## 2. Modify the firmware
 
 Make any changes you need to the code in `ModuleFirmware/`, then increment the `MODULE_ID` in `Config.h`.
 
@@ -38,7 +46,7 @@ Compile the firmware:
 1. In the Arduino IDE, under `Tools->Board` select `Adafruit Feather nRF52832`
 2. Use `Sketch->Export compiled Binary` to generate the .hex binary file for the firmware.
 
-### 3. Set up the hardware
+## 3. Set up the hardware
 
 First, hook up the module to a power supply running anywhere from 3.3V to 5V.
 
@@ -50,7 +58,7 @@ When programming unconfigured modules, I made a USB power cable and soldered the
 
 Plug in the jtag connector and plug the blue dev board into your computer
 
-### 4. Program the module
+## 4. Program the module
 
 During programming, you'll need to hold the jtag connector firmly against the jtag pins on the module. It's pretty tricky to both hold the connector and type in commands on the command line, so I recommend having the commands ready to be copied or already entered in to the command line so that you can just press the up/down arrows and the enter key.
 
@@ -84,7 +92,7 @@ Here is the output for a successful programming process:
     <img src='{{ "/assets/img/modules/programming/Programming05.jpg"  |  relative_url }}' alt='Programming' width="80%">
 </p>
 
-### 5. Testing the module
+## 5. Testing the module
 
 You can see if the module is working by [using the GUI]({{ "/gui/" | relative_url}}). The module should appear like normal, and you can check the logs to see if any data is coming through from the module.
 

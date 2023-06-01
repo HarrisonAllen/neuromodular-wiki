@@ -7,6 +7,11 @@ base: /modules/
 next: /modules/assembly/
 ---
 
+## Quick Links
+* [General Information](#general-information)
+* [Module Type Differences](#module-type-differences)
+* [Fiber Circuits](#fiber-circuits)
+
 ## General Information
 
 | Parameter | Value | 

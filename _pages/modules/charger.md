@@ -7,6 +7,11 @@ base: /modules/
 # next: 
 ---
 
+## Quick Links
+* [Using the charger](#using-the-charger)
+* [What you'll need](#what-youll-need)
+* [Creating the charger](#creating-the-charger)
+
 ## Using the charger
 
 1. Plug the charging board into the USB-C power supply.

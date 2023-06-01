@@ -7,6 +7,13 @@ base: /modules/
 next: /modules/battery/
 ---
 
+## Quick Links
+* [What you'll need](#what-youll-need)
+* [Reconfiguring old modules](#reconfiguring-old-modules)
+* [Configuring a PWM module](#configuring-a-pwm-module)
+* [Configuring an Analog module](#configuring-an-analog-module)
+* [Choosing header pins](#choosing-header-pins)
+
 ## What you'll need:
 * An assembled module
 * Resistors and headers for the module

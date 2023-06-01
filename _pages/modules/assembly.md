@@ -7,6 +7,11 @@ base: /modules/
 next: /modules/configuration/
 ---
 
+## Quick links
+* [What you'll need](#what-youll-need)
+* [Assembling modules](#assembling-modules)
+* [Assembling Analog module](#assembling-analog-modules)
+
 ## What you'll need:
 * The module PCBs
 * Circuit components (microcontroller, capacitors, resistors, etc.)
