@@ -10,16 +10,20 @@ next: /gui/using/modules/
 ## Quick links
 * On this page:
     * [Getting Started](#getting-started)
+        * [Get the GUI](#get-the-gui)
         * [Connecting a Module](#connecting-a-module)
-    * [Port Manager](#port-manager)
-    * [Logs](#logs)
-    * [Settings](#settings)
+    * [Configuring the GUI](#configuring-the-gui)
+        * [Port Manager](#port-manager)
+        * [Logs](#logs)
+        * [Settings](#settings)
 * [Module Control]({{ "/gui/using/modules/" | relative_url }})
 * [Pin Control]({{ "/gui/using/pins/" | relative_url }})
 * [Automation Sequence]({{ "/gui/using/automation/" | relative_url }})
 
 ## Getting Started
-<p align="center"><div class="youtube-video-container"><iframe width="1903" height="826" src="https://www.youtube.com/embed/v7-nl3x5ur4" title="Neuromodular - Getting Started" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></p>
+<p align="center"><div class="youtube-video-container"><iframe width="1903" height="826" src="https://www.youtube.com/embed/v7-nl3x5ur4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></p>
+
+### Get the GUI
 1. [Install the Neuromodular GUI]({{ "/gui/installing/" | relative_url }})
 2. Launch Neuromodular
 
@@ -48,8 +52,10 @@ This is what the GUI looks like when you launch it:
 **Notes**
 * You can connect up to 16 modules per blue dev board. To increase this number, you can connect multiple blue dev boards at once.
 
+## Configuring the GUI
+<p align="center"><div class="youtube-video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/TdC70DtIPJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></p>
 
-## Port Manager
+### Port Manager
 The port manager handles the connection between the GUI and serial devices connected to this computer. Access to the Logs window and Settings menu are found here.
 
 <p align="center">
@@ -71,7 +77,7 @@ The port manager handles the connection between the GUI and serial devices conne
 5. [**Show Logs**](#logs) - Opens the Logs window.
 6. [**Settings**](#settings) - Opens the Settings menu.
 
-## Logs
+### Logs
 The Logs window displays messages sent to and received from connected serial devices.
 
 <p align="center">
@@ -93,7 +99,7 @@ A serial message is broken down as follows:
     * `<=` - Message received from serial device
 * d. Message
 
-## Settings
+### Settings
 The Settings menu contains application wide settings. Currently it only handles module graph display settings.
 
 <p align="center">
