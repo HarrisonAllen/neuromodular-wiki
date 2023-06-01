@@ -30,7 +30,7 @@ Install everything in the software section above.
 Make any changes you need to the code in `ModuleFirmware/`, then increment the `MODULE_ID` in `Config.h`.
 
 <p align="center">
-    <img src='{{ "/assets/img/modules/programming/Programming04.jpg"  |  relative_url }}' alt='Programming' width="60%">
+    <img src='{{ "/assets/img/modules/programming/Programming04.jpg"  |  relative_url }}' alt='Programming' width="80%">
 </p>
 
 
@@ -81,7 +81,7 @@ During programming, you'll need to hold the jtag connector firmly against the jt
 Here is the output for a successful programming process:
 
 <p align="center">
-    <img src='{{ "/assets/img/modules/programming/Programming05.jpg"  |  relative_url }}' alt='Programming' width="60%">
+    <img src='{{ "/assets/img/modules/programming/Programming05.jpg"  |  relative_url }}' alt='Programming' width="80%">
 </p>
 
 ### 5. Testing the module
