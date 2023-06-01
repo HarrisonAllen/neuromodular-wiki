@@ -1,11 +1,48 @@
 ---
 layout: topic
-title: Modules - Battery
+title: Modules - Power and Batteries
 permalink: /modules/battery/
 previous: /modules/configuration/
 base: /modules/
 next: /modules/programming/
 ---
+
+## Power Options
+
+There are different power options that you can use:
+* Attached battery
+    * This page covers the process for attaching a battery
+    * Charging information can be found [here](({{ "/modules/charger/" | relative_url }}))
+    * To power on the module, use a jumper to connect the `B` and `+` pins on the module power header.
+    <p align="center">
+        <img src='{{ "/assets/img/modules/battery/Using01.jpg"  |  relative_url }}' alt='Using' width="60%">
+    </p>
+* Wired power
+    * You can create a wired adapter by removing the middle pin of a 3-pin female header and attaching two wires to the other pins. Those wires can then go to a power supply or a USB cable adapter.
+    * To connect the module to a power supply:
+        * Set the power supply voltage between 3.3V and 5V, your choice
+        * Connect the positive voltage of the supply to `+` on the module power header
+        * Connect the ground of the supply to `-` on the module power header
+    * To connect to a USB cable adapter:
+        * Connect the USB `V+` (5V) to `+` on the module power header
+        * Connect the USB `GND` to `-` on the module power header
+    <p align="center">
+        <img src='{{ "/assets/img/modules/battery/USB01.jpg"  |  relative_url }}' alt='USB' width="40%"><img src='{{ "/assets/img/modules/battery/USB02.jpg"  |  relative_url }}' alt='USB' width="40%">
+    </p>
+* Removable battery
+    * You can create a removable battery board by using an empty module PCB.
+        1. Solder the battery to the `+` and `-` battery pads on the bottom of the board (be sure that the battery leads are in the correct polarity!)
+        2. Solder a female 3-pin header to the power header pins
+        3. Bridge the `B` and `+` pins on the header.
+        4. Fold the battery over and secure with epoxy/hot glue
+    * Match the + and - on the battery board to the + and - on the module you want to power.
+    * You can charge this the same way you'd charge a module.
+    <p align="center">
+        <img src='{{ "/assets/img/modules/battery/External01.jpg"  |  relative_url }}' alt='External battery' width="40%"><img src='{{ "/assets/img/modules/battery/External02.jpg"  |  relative_url }}' alt='External battery' width="40%">
+    </p>
+    <p align="center">
+        <img src='{{ "/assets/img/modules/battery/External03.jpg"  |  relative_url }}' alt='Extrnal battery' width="60%">
+    </p>
 
 ## What you'll need:
 * An assembled and configured module
@@ -13,13 +50,6 @@ next: /modules/programming/
 * Solder paste/solder
 * Soldering iron (DO NOT USE A HEAT GUN)
 * Tweezers
-
-There are different power options that you can use:
-* Attached battery
-* Wired power
-* Removable battery
-
-Here, I'm just going to go over how to attach a battery.
 
 ## Attaching a small battery
 
