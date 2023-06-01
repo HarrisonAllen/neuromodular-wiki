@@ -19,7 +19,7 @@ next: /gui/using/modules/
 * [Automation Sequence]({{ "/gui/using/automation/" | relative_url }})
 
 ## Getting Started
-<p align="center"><iframe width="1903" height="826" src="https://www.youtube.com/embed/v7-nl3x5ur4" title="Neuromodular - Getting Started" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+<p align="center"><div class="youtube-video-container"><iframe width="1903" height="826" src="https://www.youtube.com/embed/v7-nl3x5ur4" title="Neuromodular - Getting Started" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></p>
 1. [Install the Neuromodular GUI]({{ "/gui/installing/" | relative_url }})
 2. Launch Neuromodular
 
