@@ -22,14 +22,14 @@ title: Neuromodular Wiki
 email: harrisonallen555@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is the wiki for using, modifying, and upgrading the wireless modules
-  as part of the Neuromodular project.
+  as part of the Neuromodular project for the <a href="https://bioelectronics.mit.edu/">Bioelectronics Group</a> at MIT.
 baseurl: "/neuromodular-wiki" # the subpath of your site, e.g. /blog
 url: "https://harrisonallen.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  harrisonallen
 
 include: ['_pages']
-header_pages: ['_pages/modules/main.md', '_pages/blue-board/main.md', '_pages/gui/main.md', '_pages/about.md']
+header_pages: ['_pages/modules/main.md', '_pages/blue-board/main.md', '_pages/gui/main.md']
 # Build settings
 sass:
   sass_dir: _sass
