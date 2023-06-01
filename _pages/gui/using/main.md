@@ -53,7 +53,7 @@ This is what the GUI looks like when you launch it:
 * You can connect up to 16 modules per blue dev board. To increase this number, you can connect multiple blue dev boards at once.
 
 ## Configuring the GUI
-<p align="center"><div class="youtube-video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/TdC70DtIPJE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></p>
+<p align="center"><div class="youtube-video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/SRbFgTlp2-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></p>
 
 ### Port Manager
 The port manager handles the connection between the GUI and serial devices connected to this computer. Access to the Logs window and Settings menu are found here.
