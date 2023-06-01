@@ -16,6 +16,12 @@ next: /modules/battery/
 * *(optional)* Sewing needle
     * This helps me apply small amounts of solder paste evenly
 
+## Reconfiguring old modules
+
+Have a pre-configured module, but want to change the configuration? Just remove the components, and put on new ones!
+
+If the module already has a battery, remove that before reconfiguring. Heat gun + battery = fire.
+
 ## Configuring a PWM module
 
 <p align="center">
